@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Backend\AllbooksController;
+use App\Http\Controllers\Backend\WaitinguserController;
+use App\Http\Controllers\Backend\ApproveUserController;
+
 
 
 /*
@@ -19,3 +23,6 @@ use App\Http\Controllers\AdminController;
 //     return view('welcome');
 // });
 Route::get('/admin',[AdminController::class,'test']);
+Route::get('/admin/allbooks',[AllbooksController::class,'Allbooks'])->name('admin.booklist');
+Route::get('/waitinguser',[WaitinguserController::class,'waitinguser'])->name('waitinguser');
+Route::get('/approveuser',[ApproveUserController::class,'approveuser'])->name('approveuser');
