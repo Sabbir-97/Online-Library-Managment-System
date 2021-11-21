@@ -1,7 +1,10 @@
 @extends('admin.index')
 @section('main')
 
-<a href="{{route('addAllBook')}}">Add New Books</a>
+<br>
+<a href="{{route('addAllBook')}}" class="edit-anchor">Add New Books</a>
+<br>
+<br>
 <table class="table table-bordered border-primary">
   <thead>
     <tr>

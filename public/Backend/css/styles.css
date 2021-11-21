@@ -28,13 +28,21 @@
    margin-top: 10px;
  }
  .submit-button{
-   background-color: #55efc4;
+   background-color:#636e72;
+   border-radius: 7px;
+   color:#f5f6fa;
  }
  .submit-button:hover{
-   background-color: #00b894;
+   background-color:#2d3436;
  }
-
-
+.edit-anchor{
+  background-color:#0984e3;
+  color:#dfe6e9;
+  text-decoration: none;
+  padding:10px;
+  border-radius: 24px;
+  margin:10px;
+}
 
  /* end */
 :root {
@@ -331,6 +339,7 @@ svg {
 table {
   caption-side: bottom;
   border-collapse: collapse;
+  margin-left: 10px;
 }
 
 caption {
