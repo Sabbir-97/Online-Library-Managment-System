@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AllBooksListController;
+use App\Http\Controllers\Backend\AllWaitingUserController;
 
 
 
@@ -18,6 +19,7 @@ Route::post('/book/form', [AllBooksListController::class,'bookForm'])->name('boo
 
 
 //new route
+Route::get('/all/waiting/user',[AllWaitingUserController::class,'allWaitingUser'])->name('waitingUsers');
 
 //table+button
 
