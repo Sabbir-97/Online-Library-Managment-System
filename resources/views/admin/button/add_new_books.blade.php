@@ -9,19 +9,19 @@
           <div class="field">
             <label class="label">Book Title</label>
             <div class="control">
-              <input class="input" name="book_title" type="text" placeholder="Enter the Book Title">
+              <input required class="input" name="book_title" type="text" placeholder="Enter the Book Title">
             </div>
           </div>
           <div class="field">
             <label class="label">Category</label>
             <div class="control">
-              <input class="input" name="category" type="text" placeholder="Enter the category">
+              <input required class="input" name="category" type="text" placeholder="Enter the category">
             </div>
           </div>
           <div class="field">
             <label class="label">Available Books</label>
             <div class="control">
-              <input class="input" name="available_books" type="text" placeholder="Enter the available books ">
+              <input required class="input" name="available_books" type="text" placeholder="Enter the available books ">
             </div>
           </div>
 

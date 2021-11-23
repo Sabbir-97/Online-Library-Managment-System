@@ -16,7 +16,7 @@ class CreateListOfBooksTable extends Migration
         Schema::create('list_of_books', function (Blueprint $table) {
             $table->id();
 
-            
+            $table->int('id');
             $table->string('book_title');
             $table->string('category');
             $table->string('available_books');
