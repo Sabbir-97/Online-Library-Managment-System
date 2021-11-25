@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AllBooksListController;
 use App\Http\Controllers\Backend\AllWaitingUserController;
+use App\Http\Controllers\Backend\AllapproveduserController;
 
 
 
@@ -18,8 +19,10 @@ Route::get('/add/new/books',[AllBooksListController::class,'addAllBook'])->name(
 Route::post('/book/form', [AllBooksListController::class,'bookForm'])->name('bookForm');
 
 
-//new route
+//all waiting user
+
 Route::get('/all/waiting/user',[AllWaitingUserController::class,'allWaitingUser'])->name('waitingUsers');
+Route::get('/waiting/user/form',[AllWaitingUserController::class,'allWaitingform'])->name('waiting.form');
 
 //table+button
 
@@ -27,6 +30,9 @@ Route::get('/all/waiting/user',[AllWaitingUserController::class,'allWaitingUser'
 
 //post the form
 
+// all approved user
+Route::get('/admin/alluser',[AllapproveduserController::class,'allapprovedlist'])->name('admin.alluser');
+Route::get('/admin/alluser/form',[AllapproveduserController::class,'allapprovedform'])->name('alluserapproved.form');
 
 
 

@@ -21,11 +21,12 @@
    margin-left:2%;
    color:#0984e3;
  }
+ 
  .field{
-   margin:15px;
+   margin:25px;
  }
  .control{
-   margin-top: 10px;
+   margin-top: 15px;
  }
  .submit-button{
    background-color:#636e72;

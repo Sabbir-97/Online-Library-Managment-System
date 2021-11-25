@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class WaitingUser extends Model
 {
     use HasFactory;
-    protected $fillable=['first_name','last_name','email','contact_number','approve'];
+      protected $fillable=['first_name','last_name','email','contact_number','approve'];
+    // protected $guarded=[];
    
     
     

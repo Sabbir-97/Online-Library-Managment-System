@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\WaitingUser;
+// use App\Models\WaitingUser;
 
 class AllWaitingUserController extends Controller
 {
@@ -15,10 +15,16 @@ class AllWaitingUserController extends Controller
      */
     public function allWaitingUser()
     {
-        $waitingUsers=WaitingUser::all();
-        return view ('admin.layouts.all_waiting_user',[
-            'waitingUsers'=>$waitingUsers
-        ]);
+        // $waitingUsers=WaitingUser::all();
+        return view ('admin.layouts.all_waiting_user');
+        // [
+        //     'waitingUsers'=>$waitingUsers
+        // ]);
+    }
+
+    public function allWaitingform()
+    {
+        return view('admin.layouts.waiting_user_form');
     }
 
     /**

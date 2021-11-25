@@ -45,6 +45,7 @@ class AllBooksListController extends Controller
     {
         // dd($request->all());
         ListOfBook::create([
+            'book_id'=>$request->input('book_id'),
             'book_title'=>$request->input('book_title'),
             'category'=>$request->input('category'),
             'available_books'=>$request->input('available_books'),
