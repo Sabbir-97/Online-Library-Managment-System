@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AllBooksListController;
 use App\Http\Controllers\Backend\AllWaitingUserController;
 use App\Http\Controllers\Backend\AllapproveduserController;
+use App\Http\Controllers\Backend\DashboardController;
 
 
 
@@ -22,7 +23,7 @@ Route::post('/book/form', [AllBooksListController::class,'bookForm'])->name('boo
 //all waiting user
 
 Route::get('/all/waiting/user',[AllWaitingUserController::class,'allWaitingUser'])->name('waitingUsers');
-Route::get('/waiting/user/form',[AllWaitingUserController::class,'allWaitingform'])->name('waiting.form');
+Route::get('/waiting/user/form',[AllWaitingUserController::class,'create'])->name('waiting.form');
 
 //table+button
 
@@ -39,4 +40,6 @@ Route::get('/admin/alluser/form',[AllapproveduserController::class,'allapprovedf
 
 
 
-//new
+// route for dashboard
+
+Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard.index');

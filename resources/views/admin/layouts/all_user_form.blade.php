@@ -1,6 +1,8 @@
 @extends('admin.index')
 @section('main')
 
+<br>
+</br>
 <form>
     
   <div class="mb-3">

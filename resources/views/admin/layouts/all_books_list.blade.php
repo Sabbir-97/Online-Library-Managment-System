@@ -13,6 +13,7 @@
     <!-- <th scope="col">Id</th> -->
       <th scope="col">Book Id</th>
       <th scope="col">Book Title</th>
+      <th>Image</th>
       <th scope="col">Category</th>
       <th scope="col">Available</th>
     </tr>
@@ -25,6 +26,7 @@
    <tr> 
        <td>{{$allBook->book_id}}</td>
       <td>{{$allBook->book_title}}</td>
+      <td> <img src="{{asset('/images/book/' .$allBook->image_path)}}" style="width:100px;height:50px" alt=""></td>
       <td>{{$allBook->category}}</td>
       <td>{{$allBook->available_books}}</td>
     </tr>

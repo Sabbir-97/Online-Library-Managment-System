@@ -43,12 +43,19 @@ class AllBooksListController extends Controller
      */
     public function bookForm(Request $request)
     {
+        //we concatenate(.) uniqid with the file name
+        if ($request->hasfile('image_path')){
+            $file = $request->file('image_path');
+            $filename = uniqid('photo_',true) . '.' .$file->getClientOriginalName();
+            $file->move(public_path('images/book'), $filename);
+        }
         // dd($request->all());
         ListOfBook::create([
             'book_id'=>$request->input('book_id'),
             'book_title'=>$request->input('book_title'),
             'category'=>$request->input('category'),
             'available_books'=>$request->input('available_books'),
+            'image_path'=> $filename,
         ]);
         return redirect('/all/book/list');
     }

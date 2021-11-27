@@ -1,7 +1,10 @@
 @extends('admin.index')
 @section('main')
+
 <h1>All Waiting User List</h1>
-<a href="{{route('waiting.form')}}"class="btn btn-primary">All Waiting User</a>
+<br>
+<br>
+<!-- <a href=""class="btn btn-primary">All Waiting User</a> -->
 <table class="table table-bordered border-primary">
   <thead>
     <tr>
@@ -18,17 +21,17 @@
   <tbody>
 
   <!-- sent data into object variable from array variable -->
-
-    <!-- @foreach($waitingUsers as $waitingUser)
+  @foreach ( $list as $waitinguser)
    <tr> 
-      <td>{{$waitingUser->first_name}}</td>
-      <td>{{$waitingUser->last_name}}</td>
-      <td>{{$waitingUser->email}}</td>
-      <td>{{$waitingUser->contact_number}}</td>
-      <td>{{$waitingUser->approve}}</td>
+      <td>{{$waitingusers->first_name}}</td>
+      <td>{{$waitinguser->last_name}}</td>
+      <td>{{$waitinguser->email}}</td>
+      <td>{{$waitinguser->contact_number}}</td>
+      <td>{{$waitinguser->approve}}</td>
     </tr>
-   @endforeach  -->
+   @endforeach 
+   
   </tbody>
 </table>
 
-@endsection()
+@endsection
