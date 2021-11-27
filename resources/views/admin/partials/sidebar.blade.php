@@ -27,6 +27,30 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
                                 All Approved User
                             </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                Newspapers
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                Magazines
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                User Feedback
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                Calender
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                Settings
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                Logout
+                            </a>
 
                            
                 </nav>
