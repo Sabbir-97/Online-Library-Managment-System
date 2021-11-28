@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\AllBooksListController;
 use App\Http\Controllers\Backend\AllWaitingUserController;
 use App\Http\Controllers\Backend\AllapproveduserController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\NewspaperController;
 
 
 
@@ -43,3 +44,9 @@ Route::get('/admin/alluser/form',[AllapproveduserController::class,'allapprovedf
 // route for dashboard
 
 Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard.index');
+
+// route for newspaper
+
+Route::get('/admin/newspaper/list',[NewspaperController::class,'newspaperlist'])->name('admin.newspaper');
+Route::get('/admin/newspaper/form',[NewspaperController::class,'newspaperform'])->name('newspaper.form');
+Route::post('/newspaper/store',[NewspaperController::class,'store'])->name('newspaper.store');

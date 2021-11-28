@@ -12,6 +12,7 @@
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
       <th scope="col">Email Address</th>
+      <th scope="col">Image</th>
       <th scope="col">Religion</th>
       <th scope="col">Gender</th>
     </tr>

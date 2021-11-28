@@ -3,20 +3,21 @@
 @section('main')
 
 
-<div class="card-content">
-        <form Action="{{route('bookForm')}}" method="post" enctype="multipart/form-data">
-          @csrf
+        <div class="card-content">
+         <form Action="{{route('newspaper.store')}}" method="post" enctype="multipart/form-data">
+         @csrf
+        
           <div class="field">
-            <label class="label">Book Id</label>
+            <label class="label">Newspaer Code</label>
             <div class="control">
-              <input required class="input" name="book_id" type="text" placeholder="Enter the book id">
+              <input required class="input" name="newspaper_code" type="text" placeholder="Enter the newspaper code">
             </div>
           </div>
 
            <div class="field">
-            <label class="label">Book Title</label>
+            <label class="label">Newspaper Name</label>
             <div class="control">
-              <input required class="input" name="book_title" type="text" placeholder="Enter the book title">
+              <input required class="input" name="newspaper_name" type="text" placeholder="Enter the newspaper title">
             </div>
           </div>
           <div class="field">
@@ -26,15 +27,15 @@
             </div>
           </div>
           <div class="field">
-            <label class="label">Available Books</label>
+            <label class="label">Available Newspaper</label>
             <div class="control">
-              <input required class="input" name="available_books" type="text" placeholder="Enter the available books ">
+              <input required class="input" name="available_newspaper" type="text" placeholder="Enter the available newspapers ">
             </div>
           </div>
           <div class="field">
             <label class="label">Image</label>
             <div class="control">
-              <input required class="input" name="image_path" type="file" placeholder="Choose your Image ">
+              <input required class="input" name="image" type="file" placeholder="Choose your Image ">
             </div>
           </div>
 
@@ -45,6 +46,6 @@
               </button>
             </div>
           </div>
-        </form>
-      </div>
+          </form>
+        </div>
 @endsection
