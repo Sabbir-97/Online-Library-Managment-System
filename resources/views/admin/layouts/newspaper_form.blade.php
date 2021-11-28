@@ -8,9 +8,9 @@
          @csrf
         
           <div class="field">
-            <label class="label">Newspaer Code</label>
+            <label class="label">Newspaer Id</label>
             <div class="control">
-              <input required class="input" name="newspaper_code" type="text" placeholder="Enter the newspaper code">
+              <input required class="input" name="newspaper_id" type="text" placeholder="Enter the newspaper code">
             </div>
           </div>
 

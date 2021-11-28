@@ -26,21 +26,21 @@
                             </a>
 
                             <a class="nav-link" href="{{route('allBook')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-address-book"></i></div>
                                 All Book
                             </a>
                             
                             <a class="nav-link" href="{{route('admin.newspaper')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-shield-alt"></i></div>
                                 Newspapers
                             </a>
                             <a class="nav-link" href="{{route('admin.magazine')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
                                 Magazines
                             </a>
 
                             <a class="nav-link" href="#">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
                                 Calender
                             </a>
 
@@ -50,15 +50,15 @@
                             </a>
                             
                             <a class="nav-link" href="#">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-cogs"></i></div>
                                 Settings
                             </a>
                             <a class="nav-link" href="#">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-boxes"></i></div>
                                 Report
                             </a>
                             <a class="nav-link" href="#">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-eye"></i></div>
                                 Logout
                             </a>
                             <footer>2021 All rights reserved,Developed by <a href="#">MD. SABBIR AHMMED</a></footer>

@@ -17,15 +17,17 @@
       <th scope="col">Gender</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+  @foreach($approveUsers as $approveUser)
+   <tr> 
+       <td>{{$approveUsers->user_id}}</td>
+      <td>{{$approveUsers->fast_name}}</td>
+      <td>{{$approveUsers->last_name}}</td>
+      <td>{{$approveUsers->email_adress}}</td>
+      <td>{{$approveUsers->password}}</td>
+      <td>{{$approveUsers->gender}}</td>
+      <td>{{$approveUsers->religion}}</td>
     </tr>
-    
-  </tbody>
+   @endforeach
 </table>
 
 @endsection

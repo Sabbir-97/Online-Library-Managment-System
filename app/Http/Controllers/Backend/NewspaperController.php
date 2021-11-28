@@ -20,13 +20,13 @@ class NewspaperController extends Controller
     }
 
     public function store(Request $request){
-        if($request->hasFile('image')){
+        if($request->hasfile('image')){
             $file = $request->file('image');
-            $filename = (date('Ymdhms')). '.' .$file->getClientOriginalExtension();
+            $filename = (date('Ymdhms')) . '.'  . $file->getClientOriginalExtension();
             $file->storeAs('/uploads',$filename);
         }
         newspaper::create([
-            'newspaper_code'=>$request->newspaper_code,
+            'newspaper_id'=>$request->newspaper_id,
             'newspaper_name'=>$request->newspaper_name,
             'category'=>$request->category,
             'available_newspaper'=>$request->available_newspaper,

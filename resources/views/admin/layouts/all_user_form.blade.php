@@ -6,49 +6,42 @@
 <form>
     
 <div class="card-content">
-        <form Action="{{route('bookForm')}}" method="post" enctype="multipart/form-data">
+        <form Action="{{route('approveuser.store')}}" method="post" enctype="multipart/form-data">
           @csrf
           
           <div class="field">
             <label class="label">User Id</label>
             <div class="control">
-              <input required class="input" name="book_title" type="text" placeholder="Enter your user id">
+              <input required class="input" name="user_id" type="text" placeholder="Enter your user id">
             </div>
           </div>
 
           <div class="field">
-            <label class="label">Fast Name</label>
+            <label class="label">First Name</label>
             <div class="control">
-              <input required class="input" name="category" type="text" placeholder="Enter your first name">
+              <input required class="input" name="first_name" type="text" placeholder="Enter your first name">
             </div>
           </div>
 
           <div class="field">
             <label class="label">Last Name</label>
             <div class="control">
-              <input required class="input" name="available_books" type="text" placeholder="Enter your last name ">
+              <input required class="input" name="last_name" type="text" placeholder="Enter your last name ">
             </div>
           </div>
 
           <div class="field">
             <label class="label">Email Adress</label>
             <div class="control">
-              <input required class="input" name="available_books" type="text" placeholder="Enter your email adress ">
+              <input required class="input" name="email_adress" type="text" placeholder="Enter your email adress ">
             </div>
           </div>
 
           <div class="field">
             <label class="label">Password</label>
             <div class="control">
-              <input required class="input" name="available_books" type="text" placeholder="Enter your password ">
+              <input required class="input" name="password" type="text" placeholder="Enter your password ">
             </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Image :</label>
-            <!-- <div class="control"> -->
-              <input required class="input" name="image_path" type="file" placeholder="Choose your Image ">
-            <!-- </div> -->
           </div>
 
           <div class="field">

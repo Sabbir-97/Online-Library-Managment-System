@@ -34,8 +34,9 @@ Route::get('/waiting/user/form',[AllWaitingUserController::class,'create'])->nam
 //post the form
 
 // all approved user
-Route::get('/admin/alluser',[AllapproveduserController::class,'allapprovedlist'])->name('admin.alluser');
+Route::get('/admin/alluser/list',[AllapproveduserController::class,'allapprovedlist'])->name('admin.alluser');
 Route::get('/admin/alluser/form',[AllapproveduserController::class,'allapprovedform'])->name('alluserapproved.form');
+Route::post('/approveuser/store',[AllapproveduserController::class,'store'])->name('approveuser.store');
 
 
 

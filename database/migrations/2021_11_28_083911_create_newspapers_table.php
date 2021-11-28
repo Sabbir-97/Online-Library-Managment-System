@@ -15,7 +15,7 @@ class CreateNewspapersTable extends Migration
     {
         Schema::create('newspapers', function (Blueprint $table) {
             $table->id();
-            $table->string('newspaper_code');
+            $table->string('newspaper_id');
             $table->string('newspaper_name');
             $table->string('category');
             $table->string('available_newspaper');
