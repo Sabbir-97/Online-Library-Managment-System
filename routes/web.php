@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\AllWaitingUserController;
 use App\Http\Controllers\Backend\AllapproveduserController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\NewspaperController;
+use App\Http\Controllers\Backend\MagazineController;
 
 
 
@@ -50,3 +51,8 @@ Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard.i
 Route::get('/admin/newspaper/list',[NewspaperController::class,'newspaperlist'])->name('admin.newspaper');
 Route::get('/admin/newspaper/form',[NewspaperController::class,'newspaperform'])->name('newspaper.form');
 Route::post('/newspaper/store',[NewspaperController::class,'store'])->name('newspaper.store');
+
+//route for magazine
+Route::get('/admin/magazine/list',[MagazineController::class,'magazinelist'])->name('admin.magazine');
+Route::get('/admin/magazine/form',[MagazineController::class,'magazineform'])->name('magazine.form');
+Route::post('/magazine/store',[MagazineController::class,'store'])->name('magazine.store');

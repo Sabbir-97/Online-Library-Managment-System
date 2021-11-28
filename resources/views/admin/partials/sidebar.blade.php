@@ -34,7 +34,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
                                 Newspapers
                             </a>
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{route('admin.magazine')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
                                 Magazines
                             </a>
