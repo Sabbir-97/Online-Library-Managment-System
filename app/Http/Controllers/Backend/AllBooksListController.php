@@ -43,6 +43,14 @@ class AllBooksListController extends Controller
      */
     public function bookForm(Request $request)
     {
+
+        $request->validate([
+            'book_id'=>'required',
+            'book_title'=>'required',
+            'category'=>'required',
+            'available_books'=>'required',
+            'image_path'=>'required' 
+        ]);
         //we concatenate(.) uniqid with the file name
         if ($request->hasfile('image_path')){
             $file = $request->file('image_path');

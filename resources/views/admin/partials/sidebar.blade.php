@@ -49,9 +49,14 @@
                             </a>
                             <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
+                                Report
+                            </a>
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
                                 Logout
                             </a>
+                            <footer>2021 All rights reserved,Developed by <a href="#">MD. SABBIR AHMMED</a></footer>
 
-                           
+                            
                 </nav>
             </div>

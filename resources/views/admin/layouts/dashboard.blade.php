@@ -39,7 +39,7 @@
                             </div>
 
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
+                                <div class="card bg-info text-white mb-4">
                                     <div class="card-body">Newspapers</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="#">View Details</a>
@@ -49,7 +49,7 @@
                             </div>
 
                             <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
+                                <div class="card bg-secondary text-white mb-4">
                                     <div class="card-body">Magazines</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
                                         <a class="small text-white stretched-link" href="#">View Details</a>
@@ -58,7 +58,16 @@
                                 </div>
                             </div>
 
+                            
+
                          </div>
+
+                         
+                         <br>
+                         <br>
+                         <br>
+                         <br>
+                         <footer>2021 All rights reserved,Developed by <a href="#">MD. SABBIR AHMMED</a></footer>
 
                          
 
