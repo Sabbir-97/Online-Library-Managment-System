@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\ApproveUser;
+use App\Models\Approve;
 use Illuminate\Http\Request;
 
 class AllapproveduserController extends Controller
@@ -19,7 +19,7 @@ class AllapproveduserController extends Controller
     }
     public function store(Request $request){
         
-        approveuser::create([
+        approve::create([
             'user_id'=>$request->user_id,
             'fast_name'=>$request->fast_name,
             'last_name'=>$request->last_name,

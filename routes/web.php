@@ -57,3 +57,16 @@ Route::post('/newspaper/store',[NewspaperController::class,'store'])->name('news
 Route::get('/admin/magazine/list',[MagazineController::class,'magazinelist'])->name('admin.magazine');
 Route::get('/admin/magazine/form',[MagazineController::class,'magazineform'])->name('magazine.form');
 Route::post('/magazine/store',[MagazineController::class,'store'])->name('magazine.store');
+
+
+
+
+
+
+
+
+//Website
+
+Route::get('/user', function(){
+    return view('user.index');
+});

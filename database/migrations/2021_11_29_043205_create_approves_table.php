@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateApproveUsersTable extends Migration
+class CreateApprovesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateApproveUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('approve_users', function (Blueprint $table) {
+        Schema::create('approves', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
             $table->string('fast_name');
@@ -23,6 +23,7 @@ class CreateApproveUsersTable extends Migration
             $table->string('gender');
             $table->string('religion');
             
+
             $table->timestamps();
         });
     }
@@ -34,6 +35,6 @@ class CreateApproveUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('approve_users');
+        Schema::dropIfExists('approves');
     }
 }
