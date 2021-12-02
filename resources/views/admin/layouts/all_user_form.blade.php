@@ -40,6 +40,13 @@
           <div class="field">
             <label class="label">Password</label>
             <div class="control">
+            <input type="date" name="dob" id="dob">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Date of Birth</label>
+            <div class="control">
               <input required class="input" name="password" type="text" placeholder="Enter your password ">
             </div>
           </div>
