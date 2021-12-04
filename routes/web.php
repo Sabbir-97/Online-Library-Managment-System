@@ -67,5 +67,5 @@ Route::get('/user', function(){
 });
 
 // all approved user
-Route::get('/admin/approveduser/list',[ApproveduserController::class,'approveduserlist'])->name('admin.approveduser');
-Route::get('/approveduser/form',[ApproveduserController::class,'approvedform'])->name('approveduser.form');
+Route::get('/approveduser/form',[ApproveduserController::class,'approvedform'])->name('data.form');
+Route::post('/approveduser/form',[ApproveduserController::class,'store'])->name('data.store');

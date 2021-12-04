@@ -6,7 +6,7 @@
 <form>
     
 <div class="card-content">
-<form Action="{{route('newspaper.store')}}" method="post">
+<form Action="{{route('data.store')}}" method="post">
     @csrf
           
           <div class="field">

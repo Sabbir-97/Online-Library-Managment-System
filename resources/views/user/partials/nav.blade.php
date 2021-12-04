@@ -15,7 +15,7 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: "{{url('img/slide/slide-2.jpg;')}}">
+        <div class="carousel-item" style="background-image: {{url('img/slide/slide-2.jpg')}};">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Lorem Ipsum Dolor</h2>

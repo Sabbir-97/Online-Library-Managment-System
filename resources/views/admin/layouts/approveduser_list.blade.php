@@ -3,7 +3,7 @@
 @section('main')
 
 <h1>All Approved User List</h1>
-<a href="{{route('approveduser.form')}}" class="btn btn-primary">Create a New User</a>
+<a href="" class="btn btn-primary">Create a New User</a>
 
 <table class="table">
   <thead>
@@ -21,15 +21,7 @@
       
     </tr>
   </thead>
-   <tr> 
-       <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
+   
 
 </table>
 
