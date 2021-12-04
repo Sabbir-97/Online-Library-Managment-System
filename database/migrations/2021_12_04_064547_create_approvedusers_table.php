@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateApprovesTable extends Migration
+class CreateApprovedusersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,23 @@ class CreateApprovesTable extends Migration
      */
     public function up()
     {
-        Schema::create('approves', function (Blueprint $table) {
+        Schema::create('approvedusers', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
-            $table->string('fast_name');
+            $table->integer('user_id');
+            $table->string('first_name');
             $table->string('last_name');
-            $table->string('email_adress');
+            $table->string('email_address');
             $table->string('password');
+            $table->string('dob');
             $table->string('gender');
             $table->string('religion');
-            
+            $table->string('payment_method');
+            $table->string('transaction_id');
+
+
+
+
+
 
             $table->timestamps();
         });
@@ -35,6 +42,6 @@ class CreateApprovesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('approves');
+        Schema::dropIfExists('approvedusers');
     }
 }

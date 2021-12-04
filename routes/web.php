@@ -4,10 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\AllBooksListController;
 use App\Http\Controllers\Backend\AllWaitingUserController;
-use App\Http\Controllers\Backend\AllapproveduserController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\NewspaperController;
 use App\Http\Controllers\Backend\MagazineController;
+use App\Http\Controllers\Backend\ApproveduserController;
 
 
 
@@ -32,11 +32,6 @@ Route::get('/waiting/user/form',[AllWaitingUserController::class,'create'])->nam
 //button
 
 //post the form
-
-// all approved user
-Route::get('/admin/alluser/list',[AllapproveduserController::class,'allapprovedlist'])->name('admin.alluser');
-Route::get('/admin/alluser/form',[AllapproveduserController::class,'allapprovedform'])->name('alluserapproved.form');
-Route::post('/approveuser/store',[AllapproveduserController::class,'store'])->name('approveuser.store');
 
 
 
@@ -70,3 +65,7 @@ Route::post('/magazine/store',[MagazineController::class,'store'])->name('magazi
 Route::get('/user', function(){
     return view('user.index');
 });
+
+// all approved user
+Route::get('/admin/approveduser/list',[ApproveduserController::class,'approveduserlist'])->name('admin.approveduser');
+Route::get('/approveduser/form',[ApproveduserController::class,'approvedform'])->name('approveduser.form');

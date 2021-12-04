@@ -7,10 +7,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                            <!-- <a class="nav-link" href="{{route('admin.alluser')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-secret"></i></div>
-                                Admin
-                            </a> -->
+                            
                             <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
                                 User
@@ -20,7 +17,7 @@
                                 All Waiting User
                             </a>
 
-                            <a class="nav-link" href="{{route('admin.alluser')}}">
+                            <a class="nav-link" href="{{route('admin.approveduser')}}">
                                 <div class="sb-nav-link-icon"><i class="fab fa-sketch"></i></div>
                                 All Approved User
                             </a>
