@@ -7,7 +7,7 @@ use App\Http\Controllers\Backend\AllWaitingUserController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\NewspaperController;
 use App\Http\Controllers\Backend\MagazineController;
-use App\Http\Controllers\Backend\ApproveduserController;
+
 
 
 
@@ -66,6 +66,3 @@ Route::get('/user', function(){
     return view('user.index');
 });
 
-// all approved user
-Route::get('/approveduser/form',[ApproveduserController::class,'approvedform'])->name('data.form');
-Route::post('/approveduser/form',[ApproveduserController::class,'store'])->name('data.store');

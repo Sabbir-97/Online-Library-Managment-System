@@ -8,16 +8,12 @@
                                 Dashboard
                             </a>
                             
-                            <a class="nav-link" href="#">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
-                                User
-                            </a>
                             <a class="nav-link" href="{{route('waitingUsers')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-arrow-alt-circle-right "></i></div>
                                 All Waiting User
                             </a>
 
-                            <a class="nav-link" href="{{route('admin.approveduser')}}">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fab fa-sketch"></i></div>
                                 All Approved User
                             </a>
@@ -36,6 +32,16 @@
                                 Magazines
                             </a>
 
+                            <a class="nav-link" href="{{route('admin.magazine')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
+                                Manage Category
+                            </a>
+
+                            <a class="nav-link" href="{{route('admin.magazine')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
+                                Manage Package
+                            </a>
+
                             <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
                                 Calender
@@ -44,6 +50,16 @@
                             <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fab fa-codepen"></i></div>
                                 User Feedback
+                            </a>
+
+                            <a class="nav-link" href="{{route('admin.magazine')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
+                                Contact Information
+                            </a>
+
+                            <a class="nav-link" href="{{route('admin.magazine')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
+                                Transaction History
                             </a>
                             
                             <a class="nav-link" href="#">
