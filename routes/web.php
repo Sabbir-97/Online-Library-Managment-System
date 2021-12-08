@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\AllWaitingUserController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\NewspaperController;
 use App\Http\Controllers\Backend\MagazineController;
+use App\Http\Controllers\Backend\AllUserController;
 
 
 
@@ -65,4 +66,12 @@ Route::post('/magazine/store',[MagazineController::class,'store'])->name('magazi
 Route::get('/user', function(){
     return view('user.index');
 });
+
+
+
+// Route for all_user
+
+Route::get('/admin/all/user/list',[AllUserController::class,'userlist'])->name('admin.alluser');
+Route::get('/admin/all/user/form',[AllUserController::class,'userform'])->name('all.user.form');
+Route::post('/alluser/store',[AllUserController::class,'store'])->name('all.user.store');
 

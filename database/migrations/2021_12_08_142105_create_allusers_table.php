@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWaitingUsersTable extends Migration
+class CreateAllusersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateWaitingUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('waiting_users', function (Blueprint $table) {
+        Schema::create('allusers', function (Blueprint $table) {
             $table->id();
             $table->string('user_name');
             $table->string('first_name');
@@ -26,7 +26,6 @@ class CreateWaitingUsersTable extends Migration
             $table->string('religion');
             $table->string('payment_method');
             $table->string('transaction_id');
-            $table->string('approve');
             $table->timestamps();
         });
     }
@@ -38,6 +37,6 @@ class CreateWaitingUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('waiting_users');
+        Schema::dropIfExists('allusers');
     }
 }

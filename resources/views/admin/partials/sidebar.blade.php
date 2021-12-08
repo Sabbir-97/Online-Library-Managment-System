@@ -13,7 +13,7 @@
                                 All Waiting User
                             </a>
 
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{route('admin.alluser')}}">
                                 <div class="sb-nav-link-icon"><i class="fab fa-sketch"></i></div>
                                 All Approved User
                             </a>
@@ -32,12 +32,12 @@
                                 Magazines
                             </a>
 
-                            <a class="nav-link" href="{{route('admin.magazine')}}">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
                                 Manage Category
                             </a>
 
-                            <a class="nav-link" href="{{route('admin.magazine')}}">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
                                 Manage Package
                             </a>
@@ -52,12 +52,12 @@
                                 User Feedback
                             </a>
 
-                            <a class="nav-link" href="{{route('admin.magazine')}}">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
                                 Contact Information
                             </a>
 
-                            <a class="nav-link" href="{{route('admin.magazine')}}">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
                                 Transaction History
                             </a>

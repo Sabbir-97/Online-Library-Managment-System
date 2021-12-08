@@ -8,25 +8,38 @@
 <table class="table table-bordered border-primary">
   <thead>
     <tr>
+
+      <th scope="col">User Name</th>
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
-      <th scope="col">Image</th>
-      <th scope="col">Email Adress</th>
-      <th scope="col">Contact Number</th>
+      <th scope="col">Password</th>
+      <th scope="col">Contact No</th>
+      <th scope="col">Email Address</th>
+      <th scope="col">Date of Birth</th>
       <th scope="col">Gender</th>
       <th scope="col">Religion</th>
+      <th scope="col">Payment Method</th>
+      <th scope="col">Transaction Id</th>
       <th scope="col">Approve</th>
     </tr>
   </thead>
   <tbody>
 
-  <!-- sent data into object variable from array variable -->
+  
   @foreach ( $list as $waitinguser)
    <tr> 
+
+      <td>{{$waitingusers->user_name}}</td>
       <td>{{$waitingusers->first_name}}</td>
       <td>{{$waitinguser->last_name}}</td>
-      <td>{{$waitinguser->email}}</td>
-      <td>{{$waitinguser->contact_number}}</td>
+      <td>{{$waitinguser->password}}</td>
+      <td>{{$waitinguser->contact_no}}</td>
+      <td>{{$waitingusers->email_address}}</td>
+      <td>{{$waitingusers->date_of_birth}}</td>
+      <td>{{$waitingusers->gender}}</td>
+      <td>{{$waitingusers->religion}}</td>
+      <td>{{$waitingusers->payment_method}}</td>
+      <td>{{$waitingusers->transaction_id}}</td>
       <td>{{$waitinguser->approve}}</td>
     </tr>
    @endforeach 
