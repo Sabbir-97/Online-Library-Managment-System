@@ -2,7 +2,7 @@
 @extends('admin.index')
 @section('main')
 
-<h1 class="display-4">All Newspaper List</h1>
+<h1 class="display-4">All Category List</h1>
 <br>
 
 <a href="{{route('category.form')}}" class="edit-anchor">Add New Category</a>
@@ -21,6 +21,19 @@
       
     </tr>
   </thead> 
+  <tbody>
+
+  
+
+    @foreach($cateGories as $cateGory)
+   <tr> 
+       <td>{{$cateGory->category_id}}</td>
+      <td>{{$cateGory->category_title}}</td>
+      <td>{{$cateGory->discription}}</td>
+      <td>{{$cateGory->available}}</td>
+    </tr>
+   @endforeach 
+  </tbody>
    
   
 </table>

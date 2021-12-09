@@ -81,4 +81,5 @@ Route::post('/alluser/store',[AllUserController::class,'store'])->name('all.user
 
 Route::get('/admin/category/list',[CategoryController::class,'categorylist'])->name('admin.category');
 Route::get('/admin/category/form',[CategoryController::class,'categoryform'])->name('category.form');
+Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
 

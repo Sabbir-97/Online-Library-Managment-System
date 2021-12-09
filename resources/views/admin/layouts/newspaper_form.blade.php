@@ -20,6 +20,14 @@
               <input required class="input" name="newspaper_name" type="text" placeholder="Enter the newspaper title">
             </div>
           </div>
+
+          <div class="field">
+            <label class="label">Image</label>
+            <div class="control">
+              <input required class="input" name="image" type="file" placeholder="Choose your Image ">
+            </div>
+          </div>
+          
           <div class="field">
             <label class="label">Category</label>
             <div class="control">
@@ -32,12 +40,7 @@
               <input required class="input" name="available_newspaper" type="text" placeholder="Enter the available newspapers ">
             </div>
           </div>
-          <div class="field">
-            <label class="label">Image</label>
-            <div class="control">
-              <input required class="input" name="image" type="file" placeholder="Choose your Image ">
-            </div>
-          </div>
+          
 
           <div class="field grouped">
             <div class="control">

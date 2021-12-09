@@ -25,6 +25,27 @@
     </tr>
   </thead>
 
+  <tbody>
+
+  
+
+    @foreach($allUsers as $allUser)
+   <tr> 
+       <td>{{$allUser->user_name}}</td>
+      <td>{{$allUser->first_name}}</td>
+      <td>{{$allUser->last_name}}</td>
+      <td>{{$allUser->password}}</td>
+      <td>{{$allUser->contact_no}}</td>
+      <td>{{$allUser->email_address}}</td>
+      <td>{{$allUser->date_of_birth}}</td>
+      <td>{{$allUser->gender}}</td>
+      <td>{{$allUser->religion}}</td>
+      <td>{{$allUser->payment_method}}</td>
+      <td>{{$allUser->transaction_id}}</td>
+    </tr>
+   @endforeach 
+  </tbody>
+
  
 </table>
 

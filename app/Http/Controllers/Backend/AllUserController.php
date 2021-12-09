@@ -9,7 +9,10 @@ use Illuminate\Http\Request;
 class AllUserController extends Controller
 {
     public function userlist(){
-        return view('admin.layouts.all_user_list');
+        $allUsers=Alluser::all();
+        return view('admin.layouts.all_user_list',[
+        'allUsers'=>$allUsers
+        ]);
 
     }
 
@@ -18,6 +21,23 @@ class AllUserController extends Controller
     }
 
     public function store(Request $request){
+        $request->validate([
+            'user_name'=>'required',
+            'first_name'=>'required',
+            'last_name'=>'required', 
+            'password'=>'required',
+            'contact_no'=>'required',
+            'email_address'=>'required',
+            'date_of_birth'=>'required',
+            'gender'=>'required',
+            'religion'=>'required',
+            'payment_method'=>'required',
+            'transaction_id'=>'required',
+
+
+        ]);
+
+
     alluser::create([
         'user_name'=>$request->user_name,
         'first_name'=>$request->first_name,

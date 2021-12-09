@@ -23,7 +23,7 @@
    <tr> 
        <td>{{$newsPaper->newspaper_id}}</td>
       <td>{{$newsPaper->newspaper_name}}</td>
-      <td><img src="{{url('/uploads',.$newspaper->image)}}" alt="newspaper image" width="100px"></td>
+      <td> <img src="{{asset('/images/newspapers/' .$newsPaper->image_path)}}" style="width:100px;height:50px" alt=""></td>
       <td>{{$newsPaper->category}}</td>
       <td>{{$newsPaper->available_newspaper}}</td>
     </tr>

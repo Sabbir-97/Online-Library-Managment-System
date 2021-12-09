@@ -11,14 +11,14 @@
           <div class="field">
             <label class="label">Magazine Id</label>
             <div class="control">
-              <input required class="input" name="magazine_id" type="text" placeholder="Enter the newspaper code">
+              <input required class="input" name="magazine_id" type="text" placeholder="Enter the magazine id">
             </div>
           </div>
 
            <div class="field">
             <label class="label">Magazine Name</label>
             <div class="control">
-              <input required class="input" name="magazine_name" type="text" placeholder="Enter the newspaper title">
+              <input required class="input" name="magazine_name" type="text" placeholder="Enter the magazine name">
             </div>
           </div>
           <div class="field">
@@ -30,7 +30,7 @@
           <div class="field">
             <label class="label">Available Magazine</label>
             <div class="control">
-              <input required class="input" name="available_magazine" type="text" placeholder="Enter the available newspapers ">
+              <input required class="input" name="available_magazine" type="text" placeholder="Enter the available magazine ">
             </div>
           </div>
           <div class="field">

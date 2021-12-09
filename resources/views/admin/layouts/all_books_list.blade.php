@@ -20,7 +20,7 @@
   </thead>
   <tbody>
 
-  <!-- sent data into object variable from array variable -->
+  
 
     @foreach($allBooks as $allBook)
    <tr> 
