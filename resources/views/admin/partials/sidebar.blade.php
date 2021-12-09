@@ -32,7 +32,7 @@
                                 Magazines
                             </a>
 
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{route('admin.category')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
                                 Manage Category
                             </a>
@@ -40,6 +40,18 @@
                             <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
                                 Manage Package
+                            </a>
+
+     
+
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
+                                Contact Information
+                            </a>
+
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
+                                Transaction History
                             </a>
 
                             <a class="nav-link" href="#">
@@ -50,16 +62,6 @@
                             <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fab fa-codepen"></i></div>
                                 User Feedback
-                            </a>
-
-                            <a class="nav-link" href="#">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
-                                Contact Information
-                            </a>
-
-                            <a class="nav-link" href="#">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
-                                Transaction History
                             </a>
                             
                             <a class="nav-link" href="#">

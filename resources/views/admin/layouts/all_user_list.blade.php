@@ -25,26 +25,6 @@
     </tr>
   </thead>
 
-  <tbody>
-
-<!-- sent data into object variable from array variable -->
-
-  @foreach($allusers as $alluser)
- <tr> 
-     <td>{{$alluser->user_name}}</td>
-    <td>{{$alluser->first_name}}</td>
-    <td>{{$alluser->last_name}}</td>
-    <td>{{$alluser->password}}</td>
-    <td>{{$alluser->contact_no}}</td>
-    <td>{{$alluser->email_address}}</td>
-    <td>{{$alluser->date_of_birth}}</td>
-    <td>{{$alluser->gender}}</td>
-    <td>{{$alluser->religion}}</td>
-    <td>{{$alluser->payment_method}}</td>
-    <td>{{$alluser->transaction_id}}</td>
-  </tr>
- @endforeach 
-</tbody>
  
 </table>
 

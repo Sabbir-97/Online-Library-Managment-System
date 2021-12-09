@@ -66,8 +66,8 @@
             <label class="label">Gender : </label>
             
                     <input required type="radio" name="gender" id="gender" value="male"> Male
-					<input required type="radio" name="gender" id="gender" value="female"> Female
-					<input required type="radio" name="gender" id="gender" value="others"> Others
+					          <input required type="radio" name="gender" id="gender" value="female"> Female
+					          <input required type="radio" name="gender" id="gender" value="others"> Others
             
           </div>
 
@@ -76,8 +76,8 @@
             <label class="label">Religion : </label>
         
                     <input required type="radio" name="religion" id="religion" value="islam"> Islam
-					<input required type="radio" name="religion" id="religion" value="hindu"> Hindu
-					<input required type="radio" name="religion" id="religion" value="others"> Others
+					          <input required type="radio" name="religion" id="religion" value="hindu"> Hindu
+				          	<input required type="radio" name="religion" id="religion" value="others"> Others
             
           </div>
 
@@ -87,15 +87,15 @@
             <label class="label">Payment Method</label>
             <div class="control">
             <select name="Payment Method">
-					<option value="bkash">Bkash</option>
-					<option value="nogod">Nogod</option>
-					<option value="rocket">Rocket</option>
-					<option value="ucash">Ucash</option>
-					<option value="upay">Upay</option>
-					<option value="sure cash">Sure Cash</option>
-					</select>
+				            	<option value="bkash">Bkash</option>
+					            <option value="nogod">Nogod</option>
+					            <option value="rocket">Rocket</option>
+					            <option value="ucash">Ucash</option>
+					            <option value="upay">Upay</option>
+					            <option value="sure cash">Sure Cash</option>
+					  </select>
             </div>
-          </div>
+            </div>
 
           <div class="field">
             <label class="label">Transaction Id</label>

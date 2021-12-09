@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\NewspaperController;
 use App\Http\Controllers\Backend\MagazineController;
 use App\Http\Controllers\Backend\AllUserController;
+use App\Http\Controllers\Backend\CategoryController;
 
 
 
@@ -74,4 +75,10 @@ Route::get('/user', function(){
 Route::get('/admin/all/user/list',[AllUserController::class,'userlist'])->name('admin.alluser');
 Route::get('/admin/all/user/form',[AllUserController::class,'userform'])->name('all.user.form');
 Route::post('/alluser/store',[AllUserController::class,'store'])->name('all.user.store');
+
+
+//Route for manage category
+
+Route::get('/admin/category/list',[CategoryController::class,'categorylist'])->name('admin.category');
+Route::get('/admin/category/form',[CategoryController::class,'categoryform'])->name('category.form');
 
