@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\MagazineController;
 use App\Http\Controllers\Backend\AllUserController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProfileController;
+use App\Http\Controllers\Frontend\LoginController;
 
 
 
@@ -88,4 +89,12 @@ Route::post('/alluser/store',[AllUserController::class,'store'])->name('all.user
 Route::get('/admin/category/list',[CategoryController::class,'categorylist'])->name('admin.category');
 Route::get('/admin/category/form',[CategoryController::class,'categoryform'])->name('category.form');
 Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
+
+
+//route for registration/login
+Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
+Route::post('/user/do/registration',[LoginController::class,'doRegistration'])->name('user.do.registration');
+Route::get('/user/login',[LoginController::class,'login'])->name('user.login');
+Route::post('/user/do/login',[LoginController::class,'doLogin'])->name('user.do.login');
+Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
 

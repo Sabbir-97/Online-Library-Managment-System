@@ -35,18 +35,24 @@
 
           <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#">Registration</a></li>
 
-          <li class="dropdown"><a href="#"><span>Log in</span> <i class="bi bi-chevron-right"></i></a>
+          @if(auth()->user())
+                <a class="btn btn-danger" href="{{route('user.logout')}}">logout</a>
+                @else
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('user.login')}}">Login/Registration</a>
+                </li>
+                @endif
+          
+
+          <!-- <li class="dropdown"><a href="#"><span>Registration/Log in</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Admin Login</a></li>
                   <li><a href="#">User Login</a></li>
-                  <!-- <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li> -->
+                  <li><a href="#">Registration Form</a></li>
                 </ul>
               </li>
-            </li>
+            </li> -->
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
