@@ -6,12 +6,7 @@
 <div class="card-content">
         <form Action="{{route('bookForm')}}" method="post" enctype="multipart/form-data">
           @csrf
-          <div class="field">
-            <label class="label">Book Id</label>
-            <div class="control">
-              <input required class="input" name="book_id" type="text" placeholder="Enter the book id">
-            </div>
-          </div>
+          
 
            <div class="field">
             <label class="label">Book Title</label>

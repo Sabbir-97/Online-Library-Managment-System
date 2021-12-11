@@ -16,16 +16,7 @@
               
             </ul>
             <li>
-            <li class="dropdown"><a href="#"><span>Log in</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Admin Login</a></li>
-                  <li><a href="#">User Login</a></li>
-                  <!-- <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li> -->
-                </ul>
-              </li>
-            </li>
+            
           </li>
 
           <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
@@ -44,6 +35,18 @@
 
           <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
+          <li><a href="#">Registration</a></li>
+
+          <li class="dropdown"><a href="#"><span>Log in</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Admin Login</a></li>
+                  <li><a href="#">User Login</a></li>
+                  <!-- <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li> -->
+                </ul>
+              </li>
+            </li>
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

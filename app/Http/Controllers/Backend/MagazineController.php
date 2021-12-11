@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 class MagazineController extends Controller
 {
     public function magazinelist(){
-        $magaZines=Magazine::all();
+        $magazines=Magazine::all();
         return view('admin.layouts.magazine_list',[
-            'magaZines'=> $magaZines
+            'magazines'=> $magazines
         ]);
     }
     public function magazineform(){
@@ -20,19 +20,21 @@ class MagazineController extends Controller
     public function store(Request $request){
    
         $request->validate([
-            'magazine_id'=>'required',
+            
             'magazine_name'=>'required',
             'category'=>'required', 
             'available_magazine'=>'required',
+            'img'=>'required',
 
 
         ]);
 
-
-        if ($request->hasfile('image_path')){
-            $file = $request->file('image_path');
-            $filename = uniqid('photo_',true) . '.' .$file->getClientOriginalName();
-            $file->move(public_path('images/magazine'), $filename);
+        $magazines='';
+        if($request->hasfile('img')){
+            $magazine = $request->file('img');
+            $magazines=date('Ymdhms').'.'. $magazine->getClientOriginalExtension();
+            $magazine->storeAs('/uploads/magazines',$magazines);
+            
         }
 
 
@@ -40,11 +42,11 @@ class MagazineController extends Controller
 
 
     magazine::create([
-        'magazine_id'=>$request->magazine_id,
+        
         'magazine_name'=>$request->magazine_name,
         'category'=>$request->category,
         'available_magazine'=>$request->available_magazine,
-        'image_path'=> $filename,
+        'img'=> $magazines,
         
     ]);
     return redirect('/admin/magazine/list');

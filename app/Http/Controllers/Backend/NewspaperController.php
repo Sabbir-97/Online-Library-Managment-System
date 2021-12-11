@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 class NewspaperController extends Controller
 {
     public function newspaperlist(){
-        $newsPapers=Newspaper::all();
+        $newspapers=Newspaper::all();
         return view('admin.layouts.newspaper_list',[
-            'newsPapers'=> $newsPapers
+            'newspapers'=> $newspapers
         ]);
     }
 
@@ -21,29 +21,29 @@ class NewspaperController extends Controller
 
     public function store(Request $request){
         $request->validate([
-            'newspaper_id'=>'required',
+            
             'newspaper_name'=>'required',
             'category'=>'required', 
             'available_newspaper'=>'required',
-            'image_path'=>'required',
+            'img_news'=>'required',
 
 
         ]);
 
 
-        if($request->hasfile('image_path')){
-            $file = $request->file('image_path');
-            $filename = uniqid('photo_',true) . '.' .$file->getClientOriginalName();
-            $file->move(public_path('images/newspaper'), $filename);
-           
-           
+        $newspapers='';
+        if($request->hasfile('img_news')){
+            $newspaper = $request->file('img_news');
+            $newspapers=date('Ymdhms').'.'. $newspaper->getClientOriginalExtension();
+            $newspaper->storeAs('/uploads/newspapers',$newspapers);
+            
         }
         newspaper::create([
-            'newspaper_id'=>$request->newspaper_id,
+            
             'newspaper_name'=>$request->newspaper_name,
             'category'=>$request->category,
             'available_newspaper'=>$request->available_newspaper,
-            'image_path'=>$filename,
+            'img_news'=>$newspapers,
         ]);
         return redirect('/admin/newspaper/list');
     }

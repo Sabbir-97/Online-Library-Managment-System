@@ -5,15 +5,10 @@
 
 
         <div class="card-content">
-         <form Action="{{route('magazine.store')}}" method="post">
+         <form Action="{{route('magazine.store')}}" method="post" enctype="multipart/form-data">
          @csrf
         
-          <div class="field">
-            <label class="label">Magazine Id</label>
-            <div class="control">
-              <input required class="input" name="magazine_id" type="text" placeholder="Enter the magazine id">
-            </div>
-          </div>
+          
 
            <div class="field">
             <label class="label">Magazine Name</label>
@@ -36,7 +31,7 @@
           <div class="field">
             <label class="label">Image</label>
             <div class="control">
-              <input required class="input" name="image" type="file" placeholder="Choose your Image ">
+              <input required class="input" name="img" type="file" placeholder="Choose your Image ">
             </div>
           </div>
 

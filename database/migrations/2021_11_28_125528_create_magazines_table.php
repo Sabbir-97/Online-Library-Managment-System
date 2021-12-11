@@ -15,10 +15,11 @@ class CreateMagazinesTable extends Migration
     {
         Schema::create('magazines', function (Blueprint $table) {
             $table->id();
-            $table->integer('magazine_id');
+            
             $table->string('magazine_name');
             $table->string('category');
             $table->string('available_magazine');
+            $table->string('img');
             $table->timestamps();
         });
     }

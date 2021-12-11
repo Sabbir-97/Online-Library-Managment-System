@@ -30,20 +30,12 @@ class CategoryController extends Controller
         ]);
 
             $categories='';
-            // dd($categories);
             if($request->hasfile('image')){
                 $category = $request->file('image');
                 $categories=date('Ymdhms').'.'. $category->getClientOriginalExtension();
                 $category->storeAs('/uploads/categories',$categories);
                 
             }
-
-
-        // if ($request->hasfile('image')){
-        //     $category = $request->file('image');
-        //     $categories = uniqid('photo_',true) . '.' .$category->getClientOriginalName();
-        //     $category->move(public_path('images/category'), $categories);
-        // }
 
     category::create([
         'category_id'=>$request->category_id,

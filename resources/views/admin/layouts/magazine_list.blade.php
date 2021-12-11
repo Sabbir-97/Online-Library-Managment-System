@@ -12,19 +12,20 @@
   <thead>
     <tr>
     <!-- <th scope="col">Id</th> -->
-      <th scope="col">Magazine Id</th>
-      <th scope="col">Magazine Name</th>
       
+      <th scope="col">Magazine Name</th>
       <th scope="col">Category</th>
       <th scope="col">Available</th>
+      <th scope="col">Image</th>
     </tr>
   </thead>
-  @foreach($magaZines as $magaZine)
+  @foreach($magazines as $magazine)
    <tr> 
-       <td>{{$magaZine->magazine_id}}</td>
-      <td>{{$magaZine->magazine_name}}</td>
-      <td>{{$magaZine->category}}</td>
-      <td>{{$magaZine->available_magazine}}</td>
+       
+      <td>{{$magazine->magazine_name}}</td>
+      <td>{{$magazine->category}}</td>
+      <td>{{$magazine->available_magazine}}</td>
+      <td><img src="{{url('/uploads/magazines/'.$magazine->img)}}" style="width:100px;height:50px" alt=""></td>
     </tr>
    @endforeach
   
