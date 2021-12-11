@@ -33,9 +33,16 @@ class AllUserController extends Controller
             'religion'=>'required',
             'payment_method'=>'required',
             'transaction_id'=>'required',
+            'image_path'=>'required'
 
 
         ]);
+
+        if ($request->hasfile('image_path')){
+            $file = $request->file('image_path');
+            $filename = uniqid('photo_',true) . '.' .$file->getClientOriginalName();
+            $file->move(public_path('images/alluser'), $filename);
+        }
 
 
     alluser::create([
@@ -50,6 +57,7 @@ class AllUserController extends Controller
         'religion'=>$request->religion,
         'payment_method'=>$request->payment_method,
         'transaction_id'=>$request->transaction_id,
+        'image_path'=> $filename,
 
         
     ]);

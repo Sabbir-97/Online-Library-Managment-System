@@ -17,6 +17,7 @@
       <th scope="col">Category Title</th>
       <th scope="col">Discription</th>
       <th scope="col">Available</th>
+      <th scope="col">Image</th>
       
       
     </tr>
@@ -25,12 +26,13 @@
 
   
 
-    @foreach($cateGories as $cateGory)
+    @foreach($categories as $category)
    <tr> 
-       <td>{{$cateGory->category_id}}</td>
-      <td>{{$cateGory->category_title}}</td>
-      <td>{{$cateGory->discription}}</td>
-      <td>{{$cateGory->available}}</td>
+       <td>{{$category->category_id}}</td>
+      <td>{{$category->category_title}}</td>
+      <td>{{$category->discription}}</td>
+      <td>{{$category->available}}</td>
+      <td><img src="{{url('/uploads/categories/'.$category->image)}}" style="width:100px;height:50px" alt=""></td>
     </tr>
    @endforeach 
   </tbody>

@@ -9,11 +9,15 @@ use App\Http\Controllers\Backend\NewspaperController;
 use App\Http\Controllers\Backend\MagazineController;
 use App\Http\Controllers\Backend\AllUserController;
 use App\Http\Controllers\Backend\CategoryController;
-
+use App\Http\Controllers\Backend\ProfileController;
 
 
 
 Route::get('/admin',[AdminController::class,'test']);
+
+
+
+
 
 
 
@@ -69,6 +73,8 @@ Route::get('/user', function(){
 });
 
 
+//route for profile
+Route::get('/profile details',[ProfileController::class,'profile'])->name('profile');
 
 // Route for all_user
 

@@ -12,16 +12,20 @@
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="about.html">About Us</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+              
+              
+            </ul>
+            <li>
+            <li class="dropdown"><a href="#"><span>Log in</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Admin Login</a></li>
+                  <li><a href="#">User Login</a></li>
+                  <!-- <li><a href="#">Deep Drop Down 3</a></li>
                   <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li> -->
                 </ul>
               </li>
-            </ul>
+            </li>
           </li>
 
           <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
@@ -29,7 +33,7 @@
               
               <li class="dropdown"><a href="#"><span>Category Type</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="#">Book</a></li>
+                  <li><a href="{{route('allBook')}}">Book</a></li>
                   <li><a href="#">Newspaper</a></li>
                   <li><a href="#">Magazine</a></li>
                   

@@ -4,7 +4,7 @@
 
 
 <div class="card-content">
-        <form Action="{{route('category.store')}}" method="post">
+        <form Action="{{route('category.store')}}" method="post" enctype="multipart/form-data">
           @csrf
           <div class="field">
             <label class="label">Category Id</label>
@@ -33,6 +33,14 @@
             <label class="label">Available</label>
             <div class="control">
               <input required class="input" name="available" type="text" placeholder="Enter the available">
+            </div>
+          </div>
+
+
+          <div class="field">
+            <label class="label">Image</label>
+            <div class="control">
+              <input required class="input" name="image" type="file" placeholder="Choose your Image ">
             </div>
           </div>
 
