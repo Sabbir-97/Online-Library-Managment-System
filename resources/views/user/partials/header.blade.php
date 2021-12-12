@@ -35,24 +35,20 @@
 
           <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
+          <div  class="active" >
 
           @if(auth()->user())
-                <a class="btn btn-danger" href="{{route('user.logout')}}">logout</a>
+                <a class="nav-link" href="{{route('user.logout')}}">logout</a>
                 @else
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('user.login')}}">Login/Registration</a>
                 </li>
                 @endif
+
+                </div>
           
 
-          <!-- <li class="dropdown"><a href="#"><span>Registration/Log in</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Admin Login</a></li>
-                  <li><a href="#">User Login</a></li>
-                  <li><a href="#">Registration Form</a></li>
-                </ul>
-              </li>
-            </li> -->
+          
 
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -62,6 +58,7 @@
         <a href="#" class="facebook"><i class="bu bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bu bi-instagram"></i></a>
         <a href="#" class="linkedin"><i class="bu bi-linkedin"></i></i></a>
+        <a href="#" class="google-plus"><i class="bu bi-skype"></i></a>
       </div>
 
     </div>

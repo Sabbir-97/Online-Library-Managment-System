@@ -31,7 +31,7 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<form action="{{route('user.do.registration')}}" method="POST">
+				<form action="{{route('user.do.registration')}}" method="POST" enctype="multipart/form-data">
                     @csrf
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
@@ -46,7 +46,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input name="name" type="text" class="form-control" placeholder="Enter Your First Name">
+						<input name="first_name" type="text" class="form-control" placeholder="Enter Your First Name">
 						
 					</div>
 
@@ -55,7 +55,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input name="name" type="text" class="form-control" placeholder="Enter Your Last Name">
+						<input name="last_name" type="text" class="form-control" placeholder="Enter Your Last Name">
 						
 					</div>
 
@@ -71,7 +71,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input name="name" type="text" class="form-control" placeholder="Enter Your Contact No">
+						<input name="contact" type="text" class="form-control" placeholder="Enter Your Contact No">
 						
 					</div>
 
@@ -79,7 +79,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input name="email" type="email" class="form-control" placeholder="Enter Your Email">
+						<input name="email_address" type="email" class="form-control" placeholder="Enter Your Email">
 						
 					</div>
 
@@ -89,7 +89,7 @@
 						</div>
 						<!-- <input name="date" type="dob" id="dob" class="form-control" placeholder="date of birth"> -->
 						<!-- <label for="dob">Date of Birth :</label> -->
-					<input type="date" name="dob" id="dob" class="form-control" placeholder="Enter Your Date of birth">
+					<input type="date" name="date_of_birth" id="dob" class="form-control" placeholder="Enter Your Date of birth">
 
 					</div>
 
@@ -150,7 +150,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input name="name" type="text" class="form-control" placeholder="Enter Your Transaction Id">
+						<input name="transaction" type="text" class="form-control" placeholder="Enter Your Transaction Id">
 						
 					</div>
 

@@ -71,7 +71,7 @@ Route::post('/magazine/store',[MagazineController::class,'store'])->name('magazi
 
 Route::get('/user', function(){
     return view('user.index');
-});
+})->name('frontend.user');
 
 
 //route for profile
@@ -89,6 +89,8 @@ Route::post('/alluser/store',[AllUserController::class,'store'])->name('all.user
 Route::get('/admin/category/list',[CategoryController::class,'categorylist'])->name('admin.category');
 Route::get('/admin/category/form',[CategoryController::class,'categoryform'])->name('category.form');
 Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
+Route::get('admin/category/list/details/{category_id}',[CategoryController::class,'category_details'])->name('admin.category.details');
+Route::get('admin/category/list/delete/{category_id}',[CategoryController::class,'category_delete'])->name('admin.category.delete');
 
 
 //route for registration/login
@@ -97,4 +99,9 @@ Route::post('/user/do/registration',[LoginController::class,'doRegistration'])->
 Route::get('/user/login',[LoginController::class,'login'])->name('user.login');
 Route::post('/user/do/login',[LoginController::class,'doLogin'])->name('user.do.login');
 Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
+
+
+//route for details/delet
+
+
 

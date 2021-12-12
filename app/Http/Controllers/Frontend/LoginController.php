@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -17,31 +18,33 @@ class LoginController extends Controller
         }
     
         public function doRegistration(Request $request){
-            
-            $users='';
-            if($request->hasfile('user_image')){
-                $user = $request->file('user_image');
-                $users=date('Ymdhms').'.'. $user->getClientOriginalExtension();
-                $user->storeAs('/uploads/users',$users);
+            // dd($request->all());
+            $filename='';
+            if($request->hasfile('image')){
+                $file = $request->file('image');
+                // dd($user);
+                $filename=date('Ymdhms').'.'. $file->getClientOriginalExtension();
+                // dd($filename);
+                $file->storeAs('/uploads/users',$filename);
                 
             }
 
 
-
+            // dd($request->all());
 
             User::create([
-                'user_name'=>$request->user_name,
+                'user_name'=>$request->name,
                 'first_name'=>$request->first_name,
                 'last_name'=>$request->last_name,
                 'password'=>bcrypt( $request->password),
-                'contact_no'=>$request->contact_no,
+                'contact_no'=>$request->contact,
                 'email_address'=>$request->email_address,
-                'dob'=>$request->dob,
-                'user_image'=> $users,
+                'date_of_birth'=>$request->date_of_birth,
+                'image'=>$filename,
                 'gender'=>$request->gender,
                 'religion'=>$request->religion,
-                'payment_method'=>$request->payment_method,
-                'transaction_id'=>$request->transaction_id,
+                'payment_method'=>$request->Payment_Method,
+                'transaction_id'=>$request->transaction,
                 
             ]);
             return redirect()->route('user.login');
@@ -53,12 +56,20 @@ class LoginController extends Controller
         }
     
         public function doLogin(Request $request){
-            
-            $userpost=$request->except('_token');
-                
-            
           
+            $userpost=$request->except('_token');
+           // dd($userpost);
+            //dd(auth::attempt($userpost));
+            if (auth::attempt($userpost)) {
+                return redirect()->route('frontend.user');
+            }
+            else
             return redirect()->route('user.login');
+        }
+
+        public function logout(){
+            Auth::logout();
+            return redirect()->route('frontend.user');
         }
     
         

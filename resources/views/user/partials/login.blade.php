@@ -24,11 +24,11 @@
 		<div class="card">
 			<div class="card-header">
 				<h3>Sign In</h3>
-				<div class="d-flex justify-content-end social_icon">
+				<!-- <div class="d-flex justify-content-end social_icon">
 					<span><i class="fab fa-facebook-square"></i></span>
 					<span><i class="fab fa-google-plus-square"></i></span>
 					<span><i class="fab fa-twitter-square"></i></span>
-				</div>
+				</div> -->
 			</div>
 			<div class="card-body">
 				<form action="{{route('user.do.login')}}" method="post">
@@ -39,7 +39,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input name="email" type="email" class="form-control" placeholder="user name">
+						<input name="email_address" type="text" class="form-control" placeholder="email_address">
 						
 					</div>
 
