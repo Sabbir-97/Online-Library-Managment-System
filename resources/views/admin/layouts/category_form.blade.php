@@ -6,12 +6,7 @@
 <div class="card-content">
         <form Action="{{route('category.store')}}" method="post" enctype="multipart/form-data">
           @csrf
-          <div class="field">
-            <label class="label">Category Id</label>
-            <div class="control">
-              <input required class="input" name="category_id" type="text" placeholder="Enter the category id">
-            </div>
-          </div>
+          
 
 
            <div class="field">

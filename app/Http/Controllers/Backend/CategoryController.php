@@ -21,7 +21,7 @@ class CategoryController extends Controller
 
     public function store(Request $request){
         $request->validate([
-        'category_id'=>'required',
+        
         'category_title'=>'required', 
         'discription'=>'required',
         'available'=>'required',
@@ -38,7 +38,7 @@ class CategoryController extends Controller
             }
 
     category::create([
-        'category_id'=>$request->category_id,
+        
         'category_title'=>$request->category_title,
         'discription'=>$request->discription,
         'available'=>$request->available,

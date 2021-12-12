@@ -11,7 +11,7 @@
   <thead>
     <tr>
     <!-- <th scope="col">Id</th> -->
-    <th scope="col">#</th>
+    <th scope="col">Id</th>
       <th scope="col">Book Title</th>
       <th scope="col">Category</th>
       <th scope="col">Available</th>
@@ -33,11 +33,9 @@
       
       
       <td>
-          <a class="btn-btn-primary" href=""role="button">Details</a>
-          <a class="btn-btn-primary" href=""role="button">Edit</a>
-          <a class="btn-btn-primary" href=""role="button">Delete</a>
-
-      <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+       <a button type="button" class="btn btn-success" href="#" role="button">Details</button>
+       <a button type="button" class="btn btn-primary" href="#" role="button">Edit</button>
+       <a button type="button" class="btn btn-danger" href="#" role="button">Delete</button>
     </td>
     </tr>
    @endforeach 

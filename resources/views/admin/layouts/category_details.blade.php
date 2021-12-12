@@ -11,10 +11,4 @@
 <p>Category Title: {{$categories->name}}</p>
 <p>Discription: <h4><span style="color: orange">BDT {{$categories->price}}</span></h4></p>
 <p>Available: {{$categories->description}}</p>
-
-
-    <!-- <lable>Category Title:</lable>
-    <input type="text" class="form-control" value="{{$category->ti}}">
-    <input type="file" class="form-control"> -->
-
 @endsection
