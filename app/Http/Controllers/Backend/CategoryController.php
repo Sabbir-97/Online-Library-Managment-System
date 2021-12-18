@@ -46,14 +46,19 @@ class CategoryController extends Controller
     ]);
     return redirect('/admin/category/list');
 }
-public function category_details($category_id){
-    $categories=Category::find($category_id);
+public function category_details($id){
+    $categories=Category::find($id);
     return view('admin.layouts.category_details',compact('categories'));
 }
 
 public function category_delete($id){
     Category::find($id)->delete();
     return redirect()->back()->with('success','Category Deleted.');
+}
+public function edit($id){
+    // dd('$id');
+    $category=Category::find($id);
+    return view('admin.layouts.category_edit',compact('category'));
 }
 
 

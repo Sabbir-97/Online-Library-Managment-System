@@ -89,8 +89,9 @@ Route::post('/alluser/store',[AllUserController::class,'store'])->name('all.user
 Route::get('/admin/category/list',[CategoryController::class,'categorylist'])->name('admin.category');
 Route::get('/admin/category/form',[CategoryController::class,'categoryform'])->name('category.form');
 Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
-Route::get('admin/category/list/details/{category_id}',[CategoryController::class,'category_details'])->name('admin.category.details');
-Route::get('admin/category/list/delete/{category_id}',[CategoryController::class,'category_delete'])->name('admin.category.delete');
+Route::get('admin/category/list/details/{id}',[CategoryController::class,'category_details'])->name('admin.category.details');
+Route::get('admin/category/list/delete/{id}',[CategoryController::class,'category_delete'])->name('admin.category.delete');
+Route::get('admin/category/edit/{id}',[CategoryController::class,'edit'])->name('category.edit');
 
 
 //route for registration/login
