@@ -47,6 +47,23 @@ class NewspaperController extends Controller
         ]);
         return redirect('/admin/newspaper/list');
     }
+
+
+    public function newspaper_details($id){
+        $newspapers=Newspaper::find($id);
+        return view('admin.layouts.newspaper_details',compact('newspapers'));
+    }
+
+    public function newspaper_delete($id){
+        Newspaper::find($id)->delete();
+        return redirect()->back()->with('success','Newspaper Deleted.');
+    }
+
+    public function edit($id){
+        // dd('$id');
+        $newspaper=Newspaper::find($id);
+        return view('admin.layouts.newspaper_edit',compact('newspaper'));
+    }
         
     
 }

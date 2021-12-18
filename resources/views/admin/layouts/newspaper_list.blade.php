@@ -29,9 +29,9 @@
       <td> <img src="{{url('/uploads/newspapers/' .$newspaper->img_news)}}" style="width:100px;height:50px" alt=""></td>
 
       <td>
-       <a button type="button" class="btn btn-success" href="#" role="button">Details</button>
-       <a button type="button" class="btn btn-primary" href="#" role="button">Edit</button>
-       <a button type="button" class="btn btn-danger" href="#" role="button">Delete</button>
+       <a button type="button" class="btn btn-success" href="{{route('admin.newspaper.details',$newspaper->id)}}">Details</button>
+       <a button type="button" class="btn btn-primary" href="{{route('newspaper.edit',$newspaper->id)}}">Edit</button>
+       <a button type="button" class="btn btn-danger" href="{{route('admin.newspaper.delete',$newspaper->id)}}" role="button">Delete</button>
     </td>
     </tr>
    @endforeach 

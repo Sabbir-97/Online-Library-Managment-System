@@ -29,6 +29,8 @@ Route::get('/add/new/books',[AllBooksListController::class,'addAllBook'])->name(
 Route::post('/book/form', [AllBooksListController::class,'bookForm'])->name('bookForm');
 
 
+
+
 //all waiting user
 
 Route::get('/all/waiting/user',[AllWaitingUserController::class,'allWaitingUser'])->name('waitingUsers');
@@ -54,6 +56,9 @@ Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard.i
 Route::get('/admin/newspaper/list',[NewspaperController::class,'newspaperlist'])->name('admin.newspaper');
 Route::get('/admin/newspaper/form',[NewspaperController::class,'newspaperform'])->name('newspaper.form');
 Route::post('/newspaper/store',[NewspaperController::class,'store'])->name('newspaper.store');
+Route::get('admin/newspaper/list/details/{id}',[NewspaperController::class,'newspaper_details'])->name('admin.newspaper.details');
+Route::get('admin/newspaper/list/delete/{id}',[NewspaperController::class,'newspaper_delete'])->name('admin.newspaper.delete');
+Route::get('admin/newspaper/edit/{id}',[NewspaperController::class,'edit'])->name('newspaper.edit');
 
 //route for magazine
 Route::get('/admin/magazine/list',[MagazineController::class,'magazinelist'])->name('admin.magazine');
