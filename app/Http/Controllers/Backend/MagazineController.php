@@ -49,6 +49,8 @@ class MagazineController extends Controller
         'img'=> $magazines,
         
     ]);
-    return redirect('/admin/magazine/list');
+    // return redirect('/admin/magazine/list');
+    return redirect()->route('admin.magazine');
+    
 }
 }

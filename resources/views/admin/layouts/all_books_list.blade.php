@@ -33,7 +33,7 @@
       
       
       <td>
-       <a button type="button" class="btn btn-success" href="#">Details</button>
+       <a button type="button" class="btn btn-success" href="{{route('admin.book.details',$allBook->id)}}">Details</button>
        <a button type="button" class="btn btn-primary" href="#">Edit</button>
        <a button type="button" class="btn btn-danger" href="#">Delete</button>
     </td>

@@ -45,7 +45,9 @@ class NewspaperController extends Controller
             'available_newspaper'=>$request->available_newspaper,
             'img_news'=>$newspapers,
         ]);
-        return redirect('/admin/newspaper/list');
+        // return redirect('/admin/newspaper/list');
+        return redirect()->route('admin.newspaper');
+
     }
 
 
@@ -59,11 +61,7 @@ class NewspaperController extends Controller
         return redirect()->back()->with('success','Newspaper Deleted.');
     }
 
-    public function edit($id){
-        // dd('$id');
-        $newspaper=Newspaper::find($id);
-        return view('admin.layouts.newspaper_edit',compact('newspaper'));
-    }
+    
         
     
 }

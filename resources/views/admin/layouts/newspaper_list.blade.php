@@ -30,7 +30,7 @@
 
       <td>
        <a button type="button" class="btn btn-success" href="{{route('admin.newspaper.details',$newspaper->id)}}">Details</button>
-       <a button type="button" class="btn btn-primary" href="{{route('newspaper.edit',$newspaper->id)}}">Edit</button>
+       <a button type="button" class="btn btn-primary" href="#">Edit</button>
        <a button type="button" class="btn btn-danger" href="{{route('admin.newspaper.delete',$newspaper->id)}}" role="button">Delete</button>
     </td>
     </tr>

@@ -65,7 +65,13 @@ class AllBooksListController extends Controller
             'available_books'=>$request->input('available_books'),
             'image_path'=> $filename,
         ]);
-        return redirect('/all/book/list');
+        // return redirect('/all/book/list');
+        return redirect()->route('allBook');
+    }
+
+    public function book_details($id){
+        $allBook=ListOfBook::find($id);
+        return view('admin.layouts.book_details',compact('allBook'));
     }
 
     

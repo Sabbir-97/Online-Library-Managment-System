@@ -54,12 +54,14 @@ public function category_details($id){
 public function category_delete($id){
     Category::find($id)->delete();
     return redirect()->back()->with('success','Category Deleted.');
+    
 }
 public function edit($id){
     // dd('$id');
     $category=Category::find($id);
     return view('admin.layouts.category_edit',compact('category'));
 }
+
 
 
 }

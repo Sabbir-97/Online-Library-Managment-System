@@ -24,7 +24,7 @@ use App\Http\Controllers\Backend\UserController as AdminUserController;
 
 
 
-
+//route for admin login
 
 Route::group(['prefix'=>'admin'],function (){
 
@@ -58,7 +58,7 @@ Route::get('/admin',[AdminController::class,'test'])->name('test');
 Route::get('/all/book/list',[AllBooksListController::class,'allBook'])->name('allBook');
 Route::get('/add/new/books',[AllBooksListController::class,'addAllBook'])->name('addAllBook');
 Route::post('/book/form', [AllBooksListController::class,'bookForm'])->name('bookForm');
-
+Route::get('admin/book/list/details/{id}',[AllBooksListController::class,'book_details'])->name('admin.book.details');
 
 
 
@@ -80,7 +80,7 @@ Route::get('/waiting/user/form',[AllWaitingUserController::class,'create'])->nam
 
 // route for dashboard
 
-Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard.index');
+Route::get('/',[DashboardController::class,'index'])->name('dashboard.index');
 
 // route for newspaper
 
@@ -89,7 +89,7 @@ Route::get('/admin/newspaper/form',[NewspaperController::class,'newspaperform'])
 Route::post('/newspaper/store',[NewspaperController::class,'store'])->name('newspaper.store');
 Route::get('admin/newspaper/list/details/{id}',[NewspaperController::class,'newspaper_details'])->name('admin.newspaper.details');
 Route::get('admin/newspaper/list/delete/{id}',[NewspaperController::class,'newspaper_delete'])->name('admin.newspaper.delete');
-Route::get('admin/newspaper/edit/{id}',[NewspaperController::class,'edit'])->name('newspaper.edit');
+
 
 //route for magazine
 Route::get('/admin/magazine/list',[MagazineController::class,'magazinelist'])->name('admin.magazine');
@@ -131,6 +131,7 @@ Route::get('admin/category/list/delete/{id}',[CategoryController::class,'categor
 Route::get('admin/category/edit/{id}',[CategoryController::class,'edit'])->name('category.edit');
 
 
+
 //route for registration/login
 Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
 Route::post('/user/do/registration',[LoginController::class,'doRegistration'])->name('user.do.registration');
@@ -139,7 +140,7 @@ Route::post('/user/do/login',[LoginController::class,'doLogin'])->name('user.do.
 Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
 
 
-//route for details/delet
+//route for details/delete
 
 
 
