@@ -11,10 +11,41 @@ use App\Http\Controllers\Backend\AllUserController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Frontend\LoginController;
+use App\Http\Controllers\Backend\UserController as AdminUserController;
 
 
 
-Route::get('/admin',[AdminController::class,'test']);
+
+
+
+
+
+
+
+
+
+
+
+Route::group(['prefix'=>'admin'],function (){
+
+    Route::get('/login',[AdminUserController::class,'login'])->name('admin.login');
+    Route::post('/login',[AdminUserController::class,'doLogin'])->name('admin.doLogin');
+
+    Route::group(['middleware'=>'auth'],function (){
+
+    Route::get('/logout',[AdminUserController::class,'logout'])->name('admin.logout');
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/admin',[AdminController::class,'test'])->name('test');
 
 
 
@@ -68,7 +99,8 @@ Route::post('/magazine/store',[MagazineController::class,'store'])->name('magazi
 
 
 
-
+    });
+});
 
 
 
