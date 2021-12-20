@@ -5,7 +5,7 @@
     <h1>Categories Details</h1>
 
     <p>
-        <img style="border-radius: 4px;" width="200px;" src=" {{url('/uploads/categories/'.$categories->image)}}" alt="product">
+    <img src="{{url('/uploads/categories/'.$categories->image)}}" style="width:300px;height:200px" alt="">
     </p>
 <p>Category Title: {{$categories->category_title}}</p>
 <p>Discription: {{$categories->discription}}</p>

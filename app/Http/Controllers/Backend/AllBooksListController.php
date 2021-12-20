@@ -74,6 +74,12 @@ class AllBooksListController extends Controller
         return view('admin.layouts.book_details',compact('allBook'));
     }
 
+    public function book_delete($id){
+        ListOfBook::find($id)->delete();
+        return redirect()->back()->with('success','Book Deleted.');
+        
+    }
+
     
     
    

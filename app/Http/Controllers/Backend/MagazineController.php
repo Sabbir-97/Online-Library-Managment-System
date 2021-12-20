@@ -53,4 +53,16 @@ class MagazineController extends Controller
     return redirect()->route('admin.magazine');
     
 }
+
+public function magazine_details($id){
+    $magazine=Magazine::find($id);
+    return view('admin.layouts.magazine_details',compact('magazine'));
+}
+
+public function magazine_delete($id){
+    Magazine::find($id)->delete();
+    return redirect()->back()->with('success','Magazine Deleted.');
+    
+}
+
 }

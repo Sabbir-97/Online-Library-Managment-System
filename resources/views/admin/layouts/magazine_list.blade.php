@@ -29,9 +29,9 @@
       <td><img src="{{url('/uploads/magazines/'.$magazine->img)}}" style="width:100px;height:50px" alt=""></td>
 
       <td>
-       <a button type="button" class="btn btn-success" href="#" role="button">Details</button>
+       <a button type="button" class="btn btn-success" href="{{route('admin.magazine.details',$magazine->id)}}" role="button">Details</button>
        <a button type="button" class="btn btn-primary" href="#" role="button">Edit</button>
-       <a button type="button" class="btn btn-danger" href="#" role="button">Delete</button>
+       <a button type="button" class="btn btn-danger" href="{{route('admin.magazine.delete',$magazine->id)}}" role="button">Delete</button>
     </td>
     </tr>
    @endforeach

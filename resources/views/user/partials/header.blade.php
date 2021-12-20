@@ -24,7 +24,7 @@
               
               <li class="dropdown"><a href="#"><span>Category Type</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="{{route('allBook')}}">Book</a></li>
+                  <li><a href="#">Book</a></li>
                   <li><a href="#">Newspaper</a></li>
                   <li><a href="#">Magazine</a></li>
                   

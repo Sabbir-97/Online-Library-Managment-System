@@ -59,6 +59,7 @@ Route::get('/all/book/list',[AllBooksListController::class,'allBook'])->name('al
 Route::get('/add/new/books',[AllBooksListController::class,'addAllBook'])->name('addAllBook');
 Route::post('/book/form', [AllBooksListController::class,'bookForm'])->name('bookForm');
 Route::get('admin/book/list/details/{id}',[AllBooksListController::class,'book_details'])->name('admin.book.details');
+Route::get('admin/book/list/delete/{id}',[AllBooksListController::class,'book_delete'])->name('admin.book.delete');
 
 
 
@@ -95,7 +96,8 @@ Route::get('admin/newspaper/list/delete/{id}',[NewspaperController::class,'newsp
 Route::get('/admin/magazine/list',[MagazineController::class,'magazinelist'])->name('admin.magazine');
 Route::get('/admin/magazine/form',[MagazineController::class,'magazineform'])->name('magazine.form');
 Route::post('/magazine/store',[MagazineController::class,'store'])->name('magazine.store');
-
+Route::get('admin/magazine/list/details/{id}',[MagazineController::class,'magazine_details'])->name('admin.magazine.details');
+Route::get('admin/magazine/list/delete/{id}',[MagazineController::class,'magazine_delete'])->name('admin.magazine.delete');
 
 
 
@@ -106,7 +108,7 @@ Route::post('/magazine/store',[MagazineController::class,'store'])->name('magazi
 
 //Website
 
-Route::get('/user', function(){
+Route::get('/', function(){
     return view('user.index');
 })->name('frontend.user');
 
