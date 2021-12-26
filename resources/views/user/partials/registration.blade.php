@@ -87,8 +87,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<!-- <input name="date" type="dob" id="dob" class="form-control" placeholder="date of birth"> -->
-						<!-- <label for="dob">Date of Birth :</label> -->
+						
 					<input type="date" name="date_of_birth" id="dob" class="form-control" placeholder="Enter Your Date of birth">
 
 					</div>

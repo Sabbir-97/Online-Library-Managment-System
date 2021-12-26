@@ -5,7 +5,7 @@
 
         <!-- Slide 1 -->
         <div class="carousel-item active" style="background-image:">
-        <!-- <img src="{{url('website/assets/img/slide/background1.jpg')}}" alt=""> -->
+        <img src="{{url('website/assets/img/slide/background1.jpg')}}" alt="">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Welcome to <span>Online Library Management System</span></h2>
@@ -19,7 +19,7 @@
         
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
+        <!-- <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Sequi ea ut et est quaerat</h2>
@@ -27,17 +27,17 @@
               <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
 
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+      <!-- <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-      </a>
+      </a> -->
 
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+      <!-- <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
         <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-      </a>
+      </a> -->
 
       <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
@@ -52,23 +52,20 @@
 
         <div class="row content">
           <div class="col-lg-6" data-aos="fade-right">
-            <h2>Eum ipsam laborum deleniti velitena</h2>
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
+            <h2>Online Library Management Rules for users</h2>
+            <h3>The main objective of the Online Library Management System is to manage the details of Books, Newspapers, Magazines also details of Users.The project is totally built at administrative end and thus only the administrator is guaranteed the access.</h3>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
+             Rules:
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li>
+              <li><i class="ri-check-double-line"></i> (i) Don't have an account? Create an account.</li>
+              <li><i class="ri-check-double-line"></i> (ii) When you create account for this page you must subscribe.Without Subscribe you can not create an account.</li>
+              <li><i class="ri-check-double-line"></i> (iii)  You must Login to this page. Without login you can not access this page.  </li>
             </ul>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            Don't break this rules.If you break this rules, you will unsubscriber for this page.
             </p>
           </div>
         </div>
