@@ -8,7 +8,14 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function categorylist(){
+    public function categorylist(Request $request){
+
+        $search = $request->query('search');
+        if($search){
+            $categories = Category::where('id','Like', '%'.$search.'%')
+                ->orWhere('category_title','like','%'.$search.'%')->get();
+            return view('admin.layouts.category_list',compact('categories'));
+        }
         $categories=Category::all();
         return view('admin.layouts.category_list',[
         'categories'=>$categories
