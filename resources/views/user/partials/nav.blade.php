@@ -61,8 +61,8 @@
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> (i) Don't have an account? Create an account.</li>
-              <li><i class="ri-check-double-line"></i> (ii) When you create account for this page you must subscribe.Without Subscribe you can not create an account.</li>
-              <li><i class="ri-check-double-line"></i> (iii)  You must Login to this page. Without login you can not access this page.  </li>
+              <li><i class="ri-check-double-line"></i> (ii) When you create an account for this page you must subscribe.Without Subscribe you can not create an account.</li>
+              <li><i class="ri-check-double-line"></i> (iii)  You must login to this page. Without login you can not access this page.  </li>
             </ul>
             <p class="fst-italic">
             Don't break this rules.If you break this rules, you will unsubscriber for this page.

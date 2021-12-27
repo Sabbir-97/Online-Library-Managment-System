@@ -38,7 +38,7 @@
       
       <td>
        <a button type="button" class="btn btn-success" href="{{route('admin.category.details',$category->id)}}">Details</button>
-       <a button type="button" class="btn btn-primary" href="{{route('category.edit',$category->id)}}">Edit</button>
+       <a button type="button" class="btn btn-primary" href="{{route('admin.category.edit',$category->id)}}">Edit</button>
        <a button type="button" class="btn btn-danger" href="{{route('admin.category.delete',$category->id)}}" >Delete</button>
     </td>
 

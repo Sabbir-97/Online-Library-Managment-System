@@ -130,7 +130,8 @@ Route::get('/admin/category/form',[CategoryController::class,'categoryform'])->n
 Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
 Route::get('admin/category/list/details/{id}',[CategoryController::class,'category_details'])->name('admin.category.details');
 Route::get('admin/category/list/delete/{id}',[CategoryController::class,'category_delete'])->name('admin.category.delete');
-Route::get('admin/category/edit/{id}',[CategoryController::class,'edit'])->name('category.edit');
+Route::get('admin/category/edit/{id}',[CategoryController::class,'edit'])->name('admin.category.edit');
+Route::put('admin/update/{id}',[CategoryController::class,'categoryUpdate'])->name('admin.category.update');
 
 
 

@@ -63,5 +63,28 @@ public function edit($id){
 }
 
 
+public function categoryUpdate(Request $request,$id)
+{
+if($request->hasfile('image')){
+    $category = $request->file('image');
+    $categories=date('Ymdhms').'.'. $category->getClientOriginalExtension();
+    $category->storeAs('/uploads/categories',$categories);
+
+    }
+
+
+    Category::find($id)->update([
+        'category_title'=>$request->category_title,
+        'discription'=>$request->discription,
+        'available'=>$request->available,
+        'image'=> $categories,
+
+    ]);
+
+
+    return redirect()->route('admin.category')->with('success','category Updated Successfully.');
+}
+
+
 
 }

@@ -1,10 +1,19 @@
 @extends('admin.index')
 
 @section('main')
+<h1>Edit Category</h1>
+
+@if(session()->has('success'))
+    <p class="alert alert-success">
+        {{session()->get('success')}}
+    </p>
+@endif
 
 
 <div class="card-content">
-        <form Action="#" method="" enctype="multipart/form-data">
+        <form action="{{route('admin.category.update', $category->id)}}" method="post" enctype="multipart/form-data">
+        @method('PUT')
+
           @csrf
           
 
@@ -47,7 +56,7 @@
           <div class="field grouped">
             <div class="control">
               <button type="submit" class="submit-button">
-                Submit
+                Update
               </button>
             </div>
           </div>
