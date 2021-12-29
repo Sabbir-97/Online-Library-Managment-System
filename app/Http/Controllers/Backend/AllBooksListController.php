@@ -13,7 +13,17 @@ class AllBooksListController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-        public function allBook(){
+        public function allBook(Request $request){
+
+
+            $search = $request->query('search');
+            if($search){
+                $allBooks = ListOfBook::where('id','Like', '%'.$search.'%')
+                    ->orWhere('book_title','like','%'.$search.'%')
+                    ->orWhere('category','like','%'.$search.'%')->get();
+                return view('admin.layouts.all_books_list',compact('allBooks'));
+            }
+
 
             // object variable
             $allBooks=ListOfBook::all();

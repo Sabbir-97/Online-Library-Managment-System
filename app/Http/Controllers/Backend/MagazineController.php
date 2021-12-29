@@ -8,7 +8,17 @@ use Illuminate\Http\Request;
 
 class MagazineController extends Controller
 {
-    public function magazinelist(){
+    public function magazinelist(Request $request){
+
+
+        $search = $request->query('search');
+        if($search){
+            $magazines = Magazine::where('id','Like', '%'.$search.'%')
+                ->orWhere('magazine_name','like','%'.$search.'%')
+                ->orWhere('category','like','%'.$search.'%')->get();
+            return view('admin.layouts.magazine_list',compact('magazines'));
+        }
+
         $magazines=Magazine::all();
         return view('admin.layouts.magazine_list',[
             'magazines'=> $magazines

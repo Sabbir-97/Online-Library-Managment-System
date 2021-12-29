@@ -2,11 +2,13 @@
 
 
 @section('main')
+
 <br>
 <form class="print_order">
         <input class="btn btn-success" type="button" onClick="PrintDiv();" value="Print">
     </form>
     <div id="divToPrint">
+        
 
     <h1>Categories Details</h1>
 

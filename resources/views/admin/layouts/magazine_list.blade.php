@@ -7,6 +7,19 @@
 
 <br>
 
+<form action="{{route('admin.magazine')}}">
+<div class="input-group rounded mt-3 mb-2">
+  <div class="form-outline">
+    <input type="search" id="form1" class="form-control" name="search" placeholder="Search" arial-label="Search" aria-describedby="search-addon" />
+    <!-- <label class="form-label" for="form1">Search</label> -->
+  </div>
+  <button type="submit" class="btn btn-primary">
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
+</form>
+
 <br>
 <table class="table table-bordered border-primary">
   <thead>

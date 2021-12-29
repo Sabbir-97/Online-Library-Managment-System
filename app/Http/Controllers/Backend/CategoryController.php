@@ -16,6 +16,7 @@ class CategoryController extends Controller
                 ->orWhere('category_title','like','%'.$search.'%')->get();
             return view('admin.layouts.category_list',compact('categories'));
         }
+        
         $categories=Category::all();
         return view('admin.layouts.category_list',[
         'categories'=>$categories

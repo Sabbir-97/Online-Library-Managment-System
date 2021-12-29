@@ -8,7 +8,17 @@ use Illuminate\Http\Request;
 
 class NewspaperController extends Controller
 {
-    public function newspaperlist(){
+    public function newspaperlist(Request $request){
+
+        $search = $request->query('search');
+        if($search){
+            $newspapers = Newspaper::where('id','Like', '%'.$search.'%')
+                ->orWhere('newspaper_name','like','%'.$search.'%')
+                ->orWhere('category','like','%'.$search.'%')->get();
+            return view('admin.layouts.newspaper_list',compact('newspapers'));
+        }
+
+
         $newspapers=Newspaper::all();
         return view('admin.layouts.newspaper_list',[
             'newspapers'=> $newspapers
