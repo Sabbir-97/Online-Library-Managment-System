@@ -60,6 +60,8 @@ Route::get('/add/new/books',[AllBooksListController::class,'addAllBook'])->name(
 Route::post('/book/form', [AllBooksListController::class,'bookForm'])->name('bookForm');
 Route::get('admin/book/list/details/{id}',[AllBooksListController::class,'book_details'])->name('admin.book.details');
 Route::get('admin/book/list/delete/{id}',[AllBooksListController::class,'book_delete'])->name('admin.book.delete');
+Route::get('admin/book/list/edit/{id}',[AllBooksListController::class,'edit'])->name('admin.book.edit');
+Route::put('admin/book/update/{id}',[AllBooksListController::class,'bookUpdate'])->name('admin.book.update');
 
 
 
@@ -90,6 +92,8 @@ Route::get('/admin/newspaper/form',[NewspaperController::class,'newspaperform'])
 Route::post('/newspaper/store',[NewspaperController::class,'store'])->name('newspaper.store');
 Route::get('admin/newspaper/list/details/{id}',[NewspaperController::class,'newspaper_details'])->name('admin.newspaper.details');
 Route::get('admin/newspaper/list/delete/{id}',[NewspaperController::class,'newspaper_delete'])->name('admin.newspaper.delete');
+Route::get('admin/newspaper/edit/{id}',[NewspaperController::class,'edit'])->name('admin.newspaper.edit');
+Route::put('admin/newspaper/update/{id}',[NewspaperController::class,'newspaperUpdate'])->name('admin.newspaper.update');
 
 
 //route for magazine
@@ -98,6 +102,8 @@ Route::get('/admin/magazine/form',[MagazineController::class,'magazineform'])->n
 Route::post('/magazine/store',[MagazineController::class,'store'])->name('magazine.store');
 Route::get('admin/magazine/list/details/{id}',[MagazineController::class,'magazine_details'])->name('admin.magazine.details');
 Route::get('admin/magazine/list/delete/{id}',[MagazineController::class,'magazine_delete'])->name('admin.magazine.delete');
+Route::get('admin/magazine/edit/{id}',[MagazineController::class,'edit'])->name('admin.magazine.edit');
+Route::put('admin/magazine/update/{id}',[MagazineController::class,'magazineUpdate'])->name('admin.magazine.update');
 
 
 
@@ -131,7 +137,7 @@ Route::post('/category/store',[CategoryController::class,'store'])->name('catego
 Route::get('admin/category/list/details/{id}',[CategoryController::class,'category_details'])->name('admin.category.details');
 Route::get('admin/category/list/delete/{id}',[CategoryController::class,'category_delete'])->name('admin.category.delete');
 Route::get('admin/category/edit/{id}',[CategoryController::class,'edit'])->name('admin.category.edit');
-Route::put('admin/update/{id}',[CategoryController::class,'categoryUpdate'])->name('admin.category.update');
+Route::put('admin/category/update/{id}',[CategoryController::class,'categoryUpdate'])->name('admin.category.update');
 
 
 

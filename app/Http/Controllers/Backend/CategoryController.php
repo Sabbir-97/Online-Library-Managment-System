@@ -65,7 +65,6 @@ public function category_delete($id){
     
 }
 public function edit($id){
-    // dd('$id');
     $category=Category::find($id);
     return view('admin.layouts.category_edit',compact('category'));
 }

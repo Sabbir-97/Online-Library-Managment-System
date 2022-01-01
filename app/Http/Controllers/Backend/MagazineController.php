@@ -74,5 +74,30 @@ public function magazine_delete($id){
     return redirect()->back()->with('success','Magazine Deleted.');
     
 }
+public function edit($id){
+    $magazine=Magazine::find($id);
+    return view('admin.layouts.magazine_edit',compact('magazine'));
+}
+public function magazineUpdate(Request $request,$id)
+{
+    if($request->hasfile('img')){
+        $magazine = $request->file('img');
+        $magazines=date('Ymdhms').'.'. $magazine->getClientOriginalExtension();
+        $magazine->storeAs('/uploads/magazines',$magazines);
+        
+    }
 
+    Magazine::find($id)->update([
+        'magazine_name'=>$request->magazine_name,
+        'category'=>$request->category,
+        'available_magazine'=>$request->available_magazine,
+        'img'=> $magazines,
+
+    ]);
+
+
+    return redirect()->route('admin.magazine')->with('Success','Magazine Updated Successfully.');
+
+
+}
 }

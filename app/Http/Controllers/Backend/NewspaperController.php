@@ -71,7 +71,30 @@ class NewspaperController extends Controller
         return redirect()->back()->with('success','Newspaper Deleted.');
     }
 
+    public function edit($id){
+        $newspaper=Newspaper::find($id);
+        return view('admin.layouts.newspaper_edit',compact('newspaper'));
+    }
+    public function newspaperUpdate(Request $request,$id){
+        
+    if($request->hasfile('img_news')){
+        $newspaper = $request->file('img_news');
+        $newspapers=date('Ymdhms').'.'. $newspaper->getClientOriginalExtension();
+        $newspaper->storeAs('/uploads/newspapers',$newspapers);
+        
+    }
+
+    Newspaper::find($id)->update([
+        'newspaper_name'=>$request->newspaper_name,
+        'category'=>$request->category,
+        'available_newspaper'=>$request->available_newspaper,
+        'img_news'=>$newspapers,
+
+    ]);
+    return redirect()->route('admin.newspaper')->with('Success','Newspaper Updated Successfully.');
+
     
         
     
+}
 }

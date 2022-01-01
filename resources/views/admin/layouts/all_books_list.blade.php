@@ -48,7 +48,7 @@
       
       <td>
        <a button type="button" class="btn btn-success" href="{{route('admin.book.details',$allBook->id)}}">Details</button>
-       <a button type="button" class="btn btn-primary" href="#">Edit</button>
+       <a button type="button" class="btn btn-primary" href="{{route('admin.book.edit',$allBook->id)}}">Edit</button>
        <a button type="button" class="btn btn-danger" href="{{route('admin.book.delete',$allBook->id)}}">Delete</button>
     </td>
     </tr>

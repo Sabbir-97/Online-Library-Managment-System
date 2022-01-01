@@ -90,6 +90,32 @@ class AllBooksListController extends Controller
         
     }
 
+    public function edit($id){
+        $allBook=ListOfBook::find($id);
+        return view('admin.layouts.book_edit',compact('allBook'));
+    }
+
+    public function bookUpdate(Request $request,$id)
+    {
+
+    if ($request->hasfile('image_path')){
+        $file = $request->file('image_path');
+        $filename = uniqid('photo_',true) . '.' .$file->getClientOriginalName();
+        $file->move(public_path('images/book'), $filename);
+    }
+
+    ListOfBook::find($id)->update([
+        'book_title'=>$request->book_title,
+        'category'=>$request->category,
+        'available_books'=>$request->available_books,
+        'image_path'=> $filename,
+
+    ]);
+
+
+    return redirect()->route('allBook')->with('Success','Book Updated Successfully.');
+}
+
     
     
    
