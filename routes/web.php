@@ -26,15 +26,18 @@ use App\Http\Controllers\Backend\UserController as AdminUserController;
 
 //route for admin login
 
-Route::group(['prefix'=>'admin'],function (){
+// Route::group(['prefix'=>'admin'],function (){
 
     Route::get('/login',[AdminUserController::class,'login'])->name('admin.login');
     Route::post('/login',[AdminUserController::class,'doLogin'])->name('admin.doLogin');
 
-    Route::group(['middleware'=>'auth'],function (){
+    Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function (){
+        
+            Route::get('/', function () {
+                return view('admin.layouts.dashboard');
+        })->name('dashboard.index');
 
     Route::get('/logout',[AdminUserController::class,'logout'])->name('admin.logout');
-
 
 
 
@@ -107,7 +110,7 @@ Route::put('admin/magazine/update/{id}',[MagazineController::class,'magazineUpda
 
 
 
-    });
+    // });
 });
 
 

@@ -20,13 +20,14 @@ class UsersTableSeeder extends Seeder
             'last_name'=>'ahmmed',
             'password'=>bcrypt('123'),
             'contact_no'=>'0181564',
-            'email_address'=>'admin@gmail.com',
+            'email_address'=>'admin.panel@gmail.com',
             'date_of_birth'=>'1998-09-05',
             'image'=>'image',
             'gender'=>'gender',
             'religion'=>'religion',
             'payment_method'=>'payment_method',
             'transaction_id'=>'transaction_id',
+            'role'=>'admin'
 
         ]);
     }

@@ -51,10 +51,10 @@
                                 Transaction History
                             </a>
 
-                            <a class="nav-link" href="#">
+                            <!-- <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-calendar-alt"></i></div>
                                 Calender
-                            </a>
+                            </a> -->
 
                             <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fab fa-codepen"></i></div>

@@ -22,6 +22,7 @@
       <th scope="col">Religion</th>
       <th scope="col">Payment Method</th>
       <th scope="col">Transaction Id</th>
+      <th scope="col">Role</th>
     </tr>
   </thead>
 
@@ -42,6 +43,7 @@
       <td>{{$allUser->religion}}</td>
       <td>{{$allUser->payment_method}}</td>
       <td>{{$allUser->transaction_id}}</td>
+      <td>{{$allUser->role}}</td>
     </tr>
    @endforeach 
   </tbody>

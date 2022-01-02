@@ -28,7 +28,7 @@ class CreateUsersTable extends Migration
             $table->string('religion');
             $table->string('payment_method');
             $table->string('transaction_id');
-            $table->string('role')->default('user');
+            $table->string('role',20)->default('user');
             $table->rememberToken();
             $table->timestamps();
             
