@@ -12,6 +12,13 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Frontend\LoginController;
 use App\Http\Controllers\Backend\UserController as AdminUserController;
+use App\Http\Controllers\Frontend\AboutController;
+use App\Http\Controllers\Frontend\FeedbackController;
+use App\Http\Controllers\Frontend\ServiceController;
+use App\Http\Controllers\Frontend\UserprofileController;
+use App\Http\Controllers\Frontend\ShowBookController;
+
+
 
 
 
@@ -117,9 +124,12 @@ Route::put('admin/magazine/update/{id}',[MagazineController::class,'magazineUpda
 
 //Website
 
-Route::get('/', function(){
-    return view('user.index');
-})->name('frontend.user');
+Route::get('/',[ShowBookController::class,'index'])->name('frontend.user');
+Route::get('/about_us',[AboutController::class,'about'])->name('about_us');
+Route::get('/service',[ServiceController::class,'service'])->name('user.service');
+Route::get('/feedback1',[FeedbackController::class,'feedback'])->name('user.feedback');
+
+
 
 
 //route for profile
@@ -152,7 +162,8 @@ Route::post('/user/do/login',[LoginController::class,'doLogin'])->name('user.do.
 Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
 
 
-//route for details/delete
+//route for userprofile
 
+Route::get('user/profile',[UserprofileController::class,'userprofile'])->name('user.profile');
 
 

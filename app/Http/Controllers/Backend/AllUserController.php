@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Alluser;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AllUserController extends Controller
 {
     public function userlist(){
-        $allUsers=Alluser::all();
+        $allUsers=User::all();
         return view('admin.layouts.all_user_list',[
         'allUsers'=>$allUsers
         ]);
@@ -45,7 +45,7 @@ class AllUserController extends Controller
         }
 
 
-    alluser::create([
+    User::create([
         'user_name'=>$request->user_name,
         'first_name'=>$request->first_name,
         'last_name'=>$request->last_name,

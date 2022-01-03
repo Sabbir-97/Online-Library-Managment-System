@@ -104,6 +104,14 @@
             </div>
           </div>
 
+          <div class="field">
+            <label class="label">Image</label>
+            <div class="control">
+            <input required class="input" name="image" type="file" placeholder="Choose your Image">
+						<!-- <input type="file" name="image" id="image" class="form-control" placeholder="Choose your Image"> -->
+						</div>
+          </div>
+
 
           <div class="field grouped">
             <div class="control">

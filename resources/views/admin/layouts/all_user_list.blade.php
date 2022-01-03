@@ -11,6 +11,7 @@
   <thead>
     <tr>
     <!-- <th scope="col">Id</th> -->
+       <th scope="col">Id</th>
       <th scope="col">User Name</th>
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
@@ -22,6 +23,7 @@
       <th scope="col">Religion</th>
       <th scope="col">Payment Method</th>
       <th scope="col">Transaction Id</th>
+      <th scope="col">Image</th>
       <th scope="col">Role</th>
     </tr>
   </thead>
@@ -30,8 +32,9 @@
 
   
 
-    @foreach($allUsers as $allUser)
+    @foreach($allUsers as $key=>$allUser)
    <tr> 
+       <td>{{$key+1}}</td>
        <td>{{$allUser->user_name}}</td>
       <td>{{$allUser->first_name}}</td>
       <td>{{$allUser->last_name}}</td>
@@ -43,6 +46,7 @@
       <td>{{$allUser->religion}}</td>
       <td>{{$allUser->payment_method}}</td>
       <td>{{$allUser->transaction_id}}</td>
+      <td> <img src="{{asset('/images/alluser' .$allUser->image_path)}}" style="width:100px;height:50px" alt=""></td>
       <td>{{$allUser->role}}</td>
     </tr>
    @endforeach 

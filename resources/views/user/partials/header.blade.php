@@ -7,18 +7,22 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-
-          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+          <li>@auth
+            
+            <a href="{{route('frontend.user')}}" class="active">Home</a>
+          </li>@endauth
+         @auth
+          <li  class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="about.html">About Us</a></li>
+              <li><a href="{{route('about_us')}}">About Us</a></li>
               
               
             </ul>
-            <li>
             
           </li>
+          @endauth
 
+          @auth
           <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               
@@ -31,10 +35,12 @@
                 </ul>
               </li>
             </ul>
-          </li>
+          </li>@endauth
 
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li>@auth<a href="{{route('user.service')}}">Services</a>@endauth</li>
+          <li>@auth<a href="#">Contact</a>@endauth</li>
+          <li>@auth<a href="{{route('user.profile')}}">User Profile</a>@endauth</li>
+          <li>@auth<a href="{{route('user.feedback')}}">User Feedback</a>@endauth</li>
           <div  class="active" >
 
           @if(auth()->user())
@@ -54,12 +60,12 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <div class="header-social-links d-flex">
+      <!-- <div class="header-social-links d-flex">
         <a href="#" class="facebook"><i class="bu bi-facebook"></i></a>
         <a href="#" class="instagram"><i class="bu bi-instagram"></i></a>
         <a href="#" class="linkedin"><i class="bu bi-linkedin"></i></i></a>
         <a href="#" class="google-plus"><i class="bu bi-skype"></i></a>
-      </div>
+      </div> -->
 
     </div>
   </header>

@@ -1,11 +1,17 @@
+@extends('user.index')
+
+@section('content')
+
+
+
 <section id="hero">
     <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image:">
-        <img src="{{url('website/assets/img/slide/background1.jpg')}}" alt="">
+        <div class="carousel-item active">
+        <img src="{{url('website/assets/img/slide/background1.jpg')}}" style="height:650px;width:1400px" alt="">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Welcome to <span>Online Library Management System</span></h2>
@@ -78,6 +84,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
+        @foreach($allBooks as $allBook)
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box iconbox-blue">
               <div class="icon">
@@ -86,25 +93,18 @@
                 </svg>
                 <i class="bx bxl-dribbble"></i>
               </div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4><a href="#">Title: {{$allBook->book_title}}</a></h4>
+                <p>Category: {{$allBook->category}}</p>
+                <p>Available: {{$allBook->available_books}}</p>
             </div>
           </div>
-
-         
-
-          
-
-          
-
-          
-
-          
+        @endforeach
 
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>
+    <!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
     <!-- <section id="portfolio" class="portfolio">
@@ -209,3 +209,4 @@
 
       </div>
     </section> -->
+    @endsection
