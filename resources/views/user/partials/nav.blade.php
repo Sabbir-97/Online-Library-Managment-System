@@ -82,7 +82,7 @@
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
-
+        @auth
         <div class="row">
         @foreach($allBooks as $allBook)
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
@@ -101,7 +101,7 @@
         @endforeach
 
         </div>
-
+          @endauth
       </div>
     </section>
     <!-- End Services Section -->

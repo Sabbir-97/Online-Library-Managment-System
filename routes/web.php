@@ -128,6 +128,8 @@ Route::get('/',[ShowBookController::class,'index'])->name('frontend.user');
 Route::get('/about_us',[AboutController::class,'about'])->name('about_us');
 Route::get('/service',[ServiceController::class,'service'])->name('user.service');
 Route::get('/feedback1',[FeedbackController::class,'feedback'])->name('user.feedback');
+Route::get('/user/show/book/{id}',[FeedbackController::class,'showBook'])->name('user.show.book');
+Route::get('user/book/list/details/{id}',[FeedbackController::class,'user_book_details'])->name('user.book.details');
 
 
 

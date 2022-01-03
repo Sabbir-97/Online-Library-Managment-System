@@ -50,19 +50,10 @@
 
   @yield('content')
 
-    <!-- ======= Our Clients Section ======= -->
-    <!-- <section id="clients" class="clients">
-      <div class="container" data-aos="fade-up">
+    
+    
 
-       
-
-        
-
-      </div>
-    </section> -->
-    <!-- End Our Clients Section -->
-
-  <!-- End #main -->
+  
 
   <!-- ======= Footer ======= -->
 
