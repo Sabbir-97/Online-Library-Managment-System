@@ -74,7 +74,9 @@
                 <div class="tab-pane active" id="home">
                     <hr>
 
-                    <form class="form" action="#" method="post" id="registrationForm">
+                    <form class="form" action="{{route('profile.update',auth()->user()->id)}}" method="post" id="registrationForm">
+                        @method('PUT')
+                        @csrf
                         <!-- csrf -->
                         <div class="form-group">
                             <div class="col-xs-6">

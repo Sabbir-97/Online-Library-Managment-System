@@ -57,10 +57,22 @@ class AllUserController extends Controller
         'religion'=>$request->religion,
         'payment_method'=>$request->payment_method,
         'transaction_id'=>$request->transaction_id,
-        'image_path'=> $filename,
+        'image'=> $filename,
 
         
     ]);
-    return redirect('/admin/all/user/list');
+    // return redirect()->route('');
+
+    
+}
+public function alluser_details($id){
+    $allUsers=User::find($id);
+    return view('admin.layouts.user_list_details',compact('allUsers'));
+}
+
+public function alluser_delete($id){
+    User::find($id)->delete();
+    return redirect()->back()->with('success','Book Deleted.');
+    
 }
 }

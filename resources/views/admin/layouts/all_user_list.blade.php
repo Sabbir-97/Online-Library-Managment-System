@@ -25,6 +25,7 @@
       <th scope="col">Transaction Id</th>
       <th scope="col">Image</th>
       <th scope="col">Role</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
 
@@ -46,8 +47,14 @@
       <td>{{$allUser->religion}}</td>
       <td>{{$allUser->payment_method}}</td>
       <td>{{$allUser->transaction_id}}</td>
-      <td> <img src="{{asset('/images/alluser' .$allUser->image_path)}}" style="width:100px;height:50px" alt=""></td>
+      <td> <img src="{{asset('/uploads/users/' .$allUser->image)}}" style="width:100px;height:50px" alt=""></td>
       <td>{{$allUser->role}}</td>
+
+      <td>
+       <a button type="button" class="btn btn-success" href="{{route('admin.alluser.details',$allUser->id)}}">Details</button>
+       <!-- <a button type="button" class="btn btn-primary" href="#">Edit</button> -->
+       <a button type="button" class="btn btn-danger" href="{{route('admin.alluser.delete',$allUser->id)}}">Delete</button>
+    </td>
     </tr>
    @endforeach 
   </tbody>

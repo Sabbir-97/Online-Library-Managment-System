@@ -14,6 +14,7 @@ use App\Http\Controllers\Frontend\LoginController;
 use App\Http\Controllers\Backend\UserController as AdminUserController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\FeedbackController;
+use App\Http\Controllers\Backend\UserfeedbackController;
 use App\Http\Controllers\Frontend\ServiceController;
 use App\Http\Controllers\Frontend\UserprofileController;
 use App\Http\Controllers\Frontend\ShowBookController;
@@ -125,11 +126,39 @@ Route::put('admin/magazine/update/{id}',[MagazineController::class,'magazineUpda
 //Website
 
 Route::get('/',[ShowBookController::class,'index'])->name('frontend.user');
+
+//route for user show book
+Route::get('/user/show/book',[ShowBookController::class,'showBook'])->name('user.show.book');
+Route::get('user/book/list/details/{id}',[ShowBookController::class,'user_book_details'])->name('user.book.details');
+
+//route for show magazine
+Route::get('/user/show/magazine',[ShowBookController::class,'showMagazine'])->name('user.show.magazine');
+Route::get('/user/show/category',[ShowBookController::class,'showCategory'])->name('user.show.category');
+
+
+//route for About 
 Route::get('/about_us',[AboutController::class,'about'])->name('about_us');
+
+//route for show newspaper
+Route::get('/user/show/newspaper',[AboutController::class,'showNewspaper'])->name('user.show.newspaper');
+
+
+//route for Service 
 Route::get('/service',[ServiceController::class,'service'])->name('user.service');
-Route::get('/feedback1',[FeedbackController::class,'feedback'])->name('user.feedback');
-Route::get('/user/show/book/{id}',[FeedbackController::class,'showBook'])->name('user.show.book');
-Route::get('user/book/list/details/{id}',[FeedbackController::class,'user_book_details'])->name('user.book.details');
+
+//route for Feedback
+Route::get('/user/show/feedback',[FeedbackController::class,'feedback'])->name('user.feedback');
+Route::post('/user/website/feedback',[FeedbackController::class,'douserfeedback'])->name('website.user.feedback');
+
+//route for admin feedback
+Route::get('/admin/show/feedback',[UserfeedbackController::class,'userfeedback'])->name('admin.feedback');
+
+
+
+
+
+
+
 
 
 
@@ -137,11 +166,15 @@ Route::get('user/book/list/details/{id}',[FeedbackController::class,'user_book_d
 //route for profile
 Route::get('/profile details',[ProfileController::class,'profile'])->name('profile');
 
+
+
 // Route for all_user
 
 Route::get('/admin/all/user/list',[AllUserController::class,'userlist'])->name('admin.alluser');
 Route::get('/admin/all/user/form',[AllUserController::class,'userform'])->name('all.user.form');
 Route::post('/alluser/store',[AllUserController::class,'store'])->name('all.user.store');
+Route::get('alluser//list/details/{id}',[AllUserController::class,'alluser_details'])->name('admin.alluser.details');
+Route::get('alluser//list/delete/{id}',[AllUserController::class,'alluser_delete'])->name('admin.alluser.delete');
 
 
 //Route for manage category
@@ -167,5 +200,6 @@ Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout'
 //route for userprofile
 
 Route::get('user/profile',[UserprofileController::class,'userprofile'])->name('user.profile');
+Route::put('/profile/update/{id}',[UserprofileController::class,'profileupdate'])->name('profile.update');
 
 

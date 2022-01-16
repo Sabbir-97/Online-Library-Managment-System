@@ -11,26 +11,20 @@
             
             <a href="{{route('frontend.user')}}" class="active">Home</a>
           </li>@endauth
-         @auth
-          <li  class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="{{route('about_us')}}">About Us</a></li>
-              
-              
-            </ul>
-            
-          </li>
-          @endauth
+         
+
+          <li>@auth<a href="{{route('about_us')}}">About</a>@endauth</li>
 
           @auth
-          <li class="dropdown"><a href="#"><span>Category</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Category </span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               
               <li class="dropdown"><a href="#"><span>Category Type</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="{{ route('user.show.book',$allBook->id)  }}">Book</a></li>
-                  <li><a href="#">Newspaper</a></li>
-                  <li><a href="#">Magazine</a></li>
+                  <li><a href="{{route('user.show.book')}}">Book</a></li>
+                  <li><a href="{{route('user.show.newspaper')}}">Newspaper</a></li>
+                  <li><a href="{{route('user.show.magazine')}}">Magazine</a></li>
+                  <li><a href="{{route('user.show.category')}}">Category</a></li>
                   
                 </ul>
               </li>

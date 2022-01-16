@@ -6,7 +6,7 @@
       <div class="container" data-aos="fade-up">
         @auth
         <div class="row">
-        @foreach($allBooks as $allBook)
+        @foreach($magazines as $magazine)
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box iconbox-blue">
               <div class="icon">
@@ -15,10 +15,10 @@
                 </svg>
                 <i class="bx bxl-dribbble"></i>
               </div>
-              <h4>Title: {{$allBook->book_title}}</h4>
-                <p>Category: {{$allBook->category}}</p>
-                <p>Available: {{$allBook->available_books}}</p>
-                <a href="{{route('user.book.details',$allBook->id)}}"  class="btn btn-success">View</a>
+              <h4>Title: {{$magazine->magazine_name}}</h4>
+                <p>Category: {{$magazine->category}}</p>
+                <p>Available: {{$magazine->available_magazine}}</p>
+                <a href="#"  class="btn btn-success">View</a>
             </div>
           </div>
         @endforeach
