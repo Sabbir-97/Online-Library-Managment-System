@@ -12,7 +12,15 @@ class AboutController extends Controller
         return view('user.pages.about');
     }
 
-    public function showNewspaper(){
+    public function showNewspaper(Request $request){
+
+        $search = $request->query('search');
+        if($search){
+            $newspapers = Newspaper::where('id','Like', '%'.$search.'%')
+                ->orWhere('newspaper_name','like','%'.$search.'%')
+                ->orWhere('category','like','%'.$search.'%')->get();
+            return view('user.pages.show_newspaper',compact('newspapers'));
+        }
 
         $newspapers=Newspaper::all();
                 // dd($allBooks);

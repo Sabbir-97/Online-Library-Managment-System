@@ -9,8 +9,11 @@
     </form>
     <div id="divToPrint">
 
+    <div style="margin-left:470px;">
+            <h1>Book Details</h1>
+    </div>
 
-    <h1>Book Details</h1>
+    <div style="margin-left:470px;">
 
     <p>
     <img src="{{asset('/images/book/' .$allBook->image_path)}}" style="width:300px;height:200px" alt="">
@@ -19,6 +22,11 @@
 <p>Book Title: {{$allBook->book_title}}</p>
 <p>Category: {{$allBook->category}}</p>
 <p>Available: {{$allBook->available_books}}</p>
+
+
+    </div>
+
+    
 @endsection
 
 <script language="javascript">

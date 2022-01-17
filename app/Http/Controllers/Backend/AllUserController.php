@@ -8,7 +8,19 @@ use Illuminate\Http\Request;
 
 class AllUserController extends Controller
 {
-    public function userlist(){
+    public function userlist(Request $request){
+
+        $search = $request->query('search');
+        if($search){
+            $allUsers = User::where('id','Like', '%'.$search.'%')
+                ->orWhere('user_name','like','%'.$search.'%')
+                ->orWhere('contact_no','like','%'.$search.'%')
+                ->orWhere('email_address','like','%'.$search.'%')
+                ->orWhere('transaction_id','like','%'.$search.'%')
+                ->orWhere('role','like','%'.$search.'%')->get();
+            return view('admin.layouts.all_user_list',compact('allUsers'));
+        }
+
         $allUsers=User::all();
         return view('admin.layouts.all_user_list',[
         'allUsers'=>$allUsers

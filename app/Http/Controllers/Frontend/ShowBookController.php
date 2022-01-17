@@ -16,7 +16,15 @@ class ShowBookController extends Controller
     }
 
 
-    public function showBook(){
+    public function showBook(Request $request){
+
+        $search = $request->query('search');
+        if($search){
+            $allBooks = ListOfBook::where('id','Like', '%'.$search.'%')
+                ->orWhere('book_title','like','%'.$search.'%')
+                ->orWhere('category','like','%'.$search.'%')->get();
+            return view('user.pages.show_book',compact('allBooks'));
+        }
 
         $allBooks=ListOfBook::all();
                 // dd($allBooks);
@@ -30,7 +38,16 @@ class ShowBookController extends Controller
 
 
 
-    public function showMagazine(){
+    public function showMagazine(Request $request){
+
+        $search = $request->query('search');
+        if($search){
+            $magazines = Magazine::where('id','Like', '%'.$search.'%')
+                ->orWhere('magazine_name','like','%'.$search.'%')
+                ->orWhere('category','like','%'.$search.'%')->get();
+            return view('user.pages.show_magazine',compact('magazines'));
+        }
+
 
         $magazines=Magazine::all();
         return view('user.pages.show_magazine',compact('magazines'));
@@ -45,7 +62,14 @@ class ShowBookController extends Controller
 
 
 
-    public function showCategory(){
+    public function showCategory(Request $request){
+
+        $search = $request->query('search');
+        if($search){
+            $categories = Category::where('id','Like', '%'.$search.'%')
+                ->orWhere('category_title','like','%'.$search.'%')->get();
+            return view('user.pages.show_category',compact('categories'));
+        }
 
         $categories=Category::all();
         return view('user.pages.show_category',compact('categories'));

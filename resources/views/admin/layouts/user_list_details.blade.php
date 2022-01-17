@@ -9,13 +9,28 @@
     </form>
     <div id="divToPrint">
 
+    <div style="margin-left:470px;">
+            <h1>User Details</h1>
+    </div>
 
-    <h1>User Details</h1>
+    <div style="margin-left:470px;">
+    <td> <img src="{{asset('/uploads/users/' .$allUsers->image)}}" style="width:300px;height:200px" alt=""></td>
 
-    
-<p>User Name: {{$allUsers->user_name}}</p>
-<p>First Name: {{$allUsers->first_name}}</p>
-<p>Last Name: {{$allUsers->last_name}}</p>
+        <p>User Name: {{$allUsers->user_name}}</p>
+         <p>First Name: {{$allUsers->first_name}}</p>
+         <p>Last Name: {{$allUsers->last_name}}</p>
+         <p>Contact No: {{$allUsers->contact_no}}</p>
+         <p>Email Address: {{$allUsers->email_address}}</p>
+         <p>Date of Birth: {{$allUsers->date_of_birth}}</p>
+         <p>Gender: {{$allUsers->gender}}</p>
+         <p>Religion: {{$allUsers->religion}}</p>
+         <p>Payment Method: {{$allUsers->payment_method}}</p>
+         <p>Transaction Id: {{$allUsers->transaction_id}}</p>
+         <p>Role: {{$allUsers->role}}</p>
+
+
+    </div>
+
 @endsection
 
 <script language="javascript">

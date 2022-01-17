@@ -8,9 +8,13 @@
         <input class="btn btn-success" type="button" onClick="PrintDiv();" value="Print">
     </form>
     <div id="divToPrint">
+
+    <div style="margin-left:470px;">
+            <h1>Categories Details</h1>
+    </div>
         
 
-    <h1>Categories Details</h1>
+    <div style="margin-left:470px;">
 
     <p>
     <img src="{{url('/uploads/categories/'.$categories->image)}}" style="width:300px;height:200px" alt="">
@@ -18,6 +22,10 @@
 <p>Category Title: {{$categories->category_title}}</p>
 <p>Discription: {{$categories->discription}}</p>
 <p>Available: {{$categories->available}}</p>
+
+    </div>
+
+    
 @endsection
 
 

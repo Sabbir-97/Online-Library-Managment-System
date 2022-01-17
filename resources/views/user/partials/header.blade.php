@@ -31,8 +31,8 @@
             </ul>
           </li>@endauth
 
-          <li>@auth<a href="{{route('user.service')}}">Services</a>@endauth</li>
-          <li>@auth<a href="#">Contact</a>@endauth</li>
+          <li>@auth<a href="{{route('user.service')}}">Contact</a>@endauth</li>
+          <!-- <li>@auth<a href="#">Contact</a>@endauth</li> -->
           <li>@auth<a href="{{route('user.profile')}}">User Profile</a>@endauth</li>
           <li>@auth<a href="{{route('user.feedback')}}">User Feedback</a>@endauth</li>
           <div  class="active" >

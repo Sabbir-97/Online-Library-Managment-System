@@ -1,14 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+@extends('user.index')
 
-</head>
-<body style="background:grey;">
-        <a href="{{route('frontend.user')}}" style="text-decoration:none;padding:1%;color:brown; margin:4%;">Go Home</a>
-    <h1>about us</h1>
-</body>
-</html>
+@section('content')
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div>
+
+<h1>Welcome to Online Library Management System</h1><br>
+<p>Online Library Management System is an Automated Library System that handles the various functions of the library.</p>
+
+
+<p>The main objective of the Online Library Management System is to manage the details of Books, Newspapers, Magazines also details of Users.The project is totally built at administrative end and thus only the administrator is guaranteed the access.</p>
+
+<h2>Online Library Management Rules for users</h2>
+<p>
+             Rules:
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> (i) Don't have an account? Create an account.</li>
+              <li><i class="ri-check-double-line"></i> (ii) When you create an account for this page you must subscribe.Without Subscribe you can not create an account.</li>
+              <li><i class="ri-check-double-line"></i> (iii)  You must login to this page. Without login you can not access this page.  </li>
+            </ul>
+            <p class="fst-italic">
+            Don't break this rules.If you break this rules, you will unsubscriber for this page.
+            </p>
+
+</div>
+<br>
+<br>
+
+
+
+@endsection
