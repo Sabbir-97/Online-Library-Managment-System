@@ -80,7 +80,7 @@
     </section><!-- End About Us Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <!-- <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
         @auth
         <div class="row">
@@ -103,7 +103,7 @@
         </div>
           @endauth
       </div>
-    </section>
+    </section> -->
     <!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->

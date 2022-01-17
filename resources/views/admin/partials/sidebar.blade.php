@@ -15,7 +15,7 @@
 
                             <a class="nav-link" href="{{route('admin.alluser')}}">
                                 <div class="sb-nav-link-icon"><i class="fab fa-sketch"></i></div>
-                                All Approved User
+                                All User List
                             </a>
 
                             <a class="nav-link" href="{{route('allBook')}}">
@@ -41,10 +41,10 @@
 
      
 
-                            <a class="nav-link" href="#">
+                            <!-- <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
                                 Contact Information
-                            </a>
+                            </a> -->
 
                             <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
@@ -65,10 +65,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-cogs"></i></div>
                                 Settings
                             </a>
-                            <a class="nav-link" href="#">
+                            <!-- <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-boxes"></i></div>
                                 Report
-                            </a>
+                            </a> -->
                             
                             <footer>2021 All rights reserved,Developed by <a href="#">MD. SABBIR AHMMED</a></footer>
 

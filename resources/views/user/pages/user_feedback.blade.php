@@ -1,5 +1,12 @@
 
+@extends('user.index')
+@section('content')
 
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <div class="card-content">
          <form Action="{{route('website.user.feedback')}}" method="post" enctype="multipart/form-data">
@@ -62,3 +69,8 @@
           </div>
           </form>
         </div>
+
+        <br>
+
+
+        @endsection

@@ -28,17 +28,32 @@ class ShowBookController extends Controller
         return view('user.pages.user_book_details',compact('allBook'));
     }
 
+
+
     public function showMagazine(){
 
         $magazines=Magazine::all();
         return view('user.pages.show_magazine',compact('magazines'));
     }
+    public function user_magazine_details($id){
+        $magazine=Magazine::find($id);
+        return view('user.pages.magazine_details',compact('magazine'));
+    }
+
+
+
+
 
 
     public function showCategory(){
 
         $categories=Category::all();
         return view('user.pages.show_category',compact('categories'));
+    }
+
+    public function user_category_details($id){
+        $category=Category::find($id);
+        return view('user.pages.category_details',compact('category'));
     }
 
     

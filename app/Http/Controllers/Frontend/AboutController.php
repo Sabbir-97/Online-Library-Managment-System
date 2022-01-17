@@ -19,5 +19,10 @@ class AboutController extends Controller
         return view('user.pages.show_newspaper',compact('newspapers'));
     }
 
+    public function user_newspaper_details($id){
+        $newspaper=Newspaper::find($id);
+        return view('user.pages.newspaper_details',compact('newspaper'));
+    }
+
     
 }

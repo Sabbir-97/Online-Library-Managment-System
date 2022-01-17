@@ -127,20 +127,31 @@ Route::put('admin/magazine/update/{id}',[MagazineController::class,'magazineUpda
 
 Route::get('/',[ShowBookController::class,'index'])->name('frontend.user');
 
+
 //route for user show book
 Route::get('/user/show/book',[ShowBookController::class,'showBook'])->name('user.show.book');
 Route::get('user/book/list/details/{id}',[ShowBookController::class,'user_book_details'])->name('user.book.details');
 
-//route for show magazine
+
+//route for show user magazine
 Route::get('/user/show/magazine',[ShowBookController::class,'showMagazine'])->name('user.show.magazine');
+Route::get('user/magazine/list/details/{id}',[ShowBookController::class,'user_magazine_details'])->name('user.magazine.details');
+
+
+//route for show user category
 Route::get('/user/show/category',[ShowBookController::class,'showCategory'])->name('user.show.category');
+Route::get('user/category/list/details/{id}',[ShowBookController::class,'user_category_details'])->name('user.category.details');
+
 
 
 //route for About 
 Route::get('/about_us',[AboutController::class,'about'])->name('about_us');
 
-//route for show newspaper
+
+
+//route for show user newspaper
 Route::get('/user/show/newspaper',[AboutController::class,'showNewspaper'])->name('user.show.newspaper');
+Route::get('user/newspaper/list/details/{id}',[AboutController::class,'user_newspaper_details'])->name('user.newspaper.details');
 
 
 //route for Service 

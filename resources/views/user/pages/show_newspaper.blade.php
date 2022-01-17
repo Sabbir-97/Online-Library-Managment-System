@@ -1,5 +1,7 @@
 @extends('user.index')
 @section('content')
+<br>
+<br>
 
 
 <section id="services" class="services section-bg">
@@ -18,7 +20,7 @@
               <h4>Title: {{$newspaper->newspaper_name}}</h4>
                 <p>Category: {{$newspaper->category}}</p>
                 <p>Available: {{$newspaper->available_newspaper}}</p>
-                <a href="#"  class="btn btn-success">View</a>
+                <a href="{{route('user.newspaper.details',$newspaper->id)}}"  class="btn btn-success">View</a>
             </div>
           </div>
         @endforeach

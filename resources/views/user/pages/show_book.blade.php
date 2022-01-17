@@ -1,5 +1,7 @@
 @extends('user.index')
 @section('content')
+<br>
+<br>
 
 
 <section id="services" class="services section-bg">
