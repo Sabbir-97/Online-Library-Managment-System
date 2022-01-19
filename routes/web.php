@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\MagazineController;
 use App\Http\Controllers\Backend\AllUserController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProfileController;
+use App\Http\Controllers\Backend\TransactionController;
 use App\Http\Controllers\Frontend\LoginController;
 use App\Http\Controllers\Backend\UserController as AdminUserController;
 use App\Http\Controllers\Frontend\AboutController;
@@ -18,6 +19,7 @@ use App\Http\Controllers\Backend\UserfeedbackController;
 use App\Http\Controllers\Frontend\ServiceController;
 use App\Http\Controllers\Frontend\UserprofileController;
 use App\Http\Controllers\Frontend\ShowBookController;
+
 
 
 
@@ -186,6 +188,9 @@ Route::get('/admin/all/user/form',[AllUserController::class,'userform'])->name('
 Route::post('/alluser/store',[AllUserController::class,'store'])->name('all.user.store');
 Route::get('alluser//list/details/{id}',[AllUserController::class,'alluser_details'])->name('admin.alluser.details');
 Route::get('alluser//list/delete/{id}',[AllUserController::class,'alluser_delete'])->name('admin.alluser.delete');
+
+//route for transaction
+Route::get('/admin/transaction/list',[TransactionController::class,'transaction_list'])->name('user.transaction');
 
 
 //Route for manage category

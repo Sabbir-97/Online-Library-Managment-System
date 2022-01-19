@@ -46,7 +46,7 @@
                                 Contact Information
                             </a> -->
 
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="{{route('user.transaction')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-reader"></i></div>
                                 Transaction History
                             </a>
