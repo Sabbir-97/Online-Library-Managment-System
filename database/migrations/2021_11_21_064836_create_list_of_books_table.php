@@ -20,6 +20,9 @@ class CreateListOfBooksTable extends Migration
             $table->string('book_title');
             $table->string('category');
             $table->string('available_books');
+            $table->string('description');
+            $table->string('file');
+            
             // $table->timestamps();
         });
     }

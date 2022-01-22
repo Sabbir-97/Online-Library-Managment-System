@@ -22,7 +22,7 @@
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> (i) Don't have an account? Create an account.</li>
-              <li><i class="ri-check-double-line"></i> (ii) When you create an account for this page you must subscribe.Without Subscribe you can not create an account.</li>
+              <li><i class="ri-check-double-line"></i> (ii) When you create an account for this page you must subscribe and monthly subscription fee only 100 taka .Without Subscribe you can not create an account.</li>
               <li><i class="ri-check-double-line"></i> (iii)  You must login to this page. Without login you can not access this page.  </li>
             </ul>
             <p class="fst-italic">

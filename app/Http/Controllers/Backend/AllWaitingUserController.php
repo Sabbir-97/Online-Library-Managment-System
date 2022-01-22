@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 use App\Models\WaitingUsers;
+use App\Models\User;
 use App\Http\Controllers\Controller; 
 use Illuminate\Http\Request;
 
@@ -29,9 +30,14 @@ class AllWaitingUserController extends Controller
      */
     public function create()
     {
+        
         return view('admin.layouts.waiting_user_form');
         
     }
+
+    
+
+    
     
 
 }

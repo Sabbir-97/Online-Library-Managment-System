@@ -24,18 +24,18 @@
 		<div class="card">
 			<div class="card-header">
 				<h3>Sign In</h3>
-				<div class="d-flex justify-content-end social_icon">
+				<!-- <div class="d-flex justify-content-end social_icon">
 					<span><i class="fab fa-facebook-square"></i></span>
 					<span><i class="fab fa-google-plus-square"></i></span>
 					<span><i class="fab fa-twitter-square"></i></span>
-				</div>
+				</div> -->
 			</div>
 			<div class="card-body">
 				<form action="{{route('user.do.registration')}}" method="POST" enctype="multipart/form-data">
                     @csrf
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class=""></i></span>
 						</div>
 						<input name="name" type="text" class="form-control" placeholder="Enter Your User Name">
 						
@@ -44,7 +44,7 @@
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class=""></i></span>
 						</div>
 						<input name="first_name" type="text" class="form-control" placeholder="Enter Your First Name">
 						
@@ -53,7 +53,7 @@
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class=""></i></span>
 						</div>
 						<input name="last_name" type="text" class="form-control" placeholder="Enter Your Last Name">
 						
@@ -62,14 +62,14 @@
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
+							<span class="input-group-text"><i class=""></i></span>
 						</div>
 						<input name="password" type="password" class="form-control" placeholder="Enter Your Password">
 					</div>
 
                     <div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class=""></i></span>
 						</div>
 						<input name="contact" type="text" class="form-control" placeholder="Enter Your Contact No">
 						
@@ -77,7 +77,7 @@
 
                     <div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class=""></i></span>
 						</div>
 						<input name="email_address" type="email" class="form-control" placeholder="Enter Your Email">
 						
@@ -85,7 +85,7 @@
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class=""></i></span>
 						</div>
 						
 					<input type="date" name="date_of_birth" id="dob" class="form-control" placeholder="Enter Your Date of birth">
@@ -94,7 +94,7 @@
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class=""></i></span>
 						</div>
 						<input type="file" name="image" id="image" class="form-control" placeholder="Choose your Image">
 						
@@ -102,7 +102,7 @@
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class=""></i></span>
 						</div>
 						<div class="form-control">
 						<input type="radio" name="gender" id="gender" value="male"> Male
@@ -114,7 +114,7 @@
 					
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class=""></i></span>
 						</div>
 						<div class="form-control">
 						<input type="radio" name="religion" id="religion" value="islam"> Islam
@@ -126,7 +126,7 @@
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class=""></i></span>
 						</div>
 						<!-- <input name="phone" type="number" class="form-control" placeholder="Enter Your Payment Method"> -->
 						<div class="form-control">
@@ -147,7 +147,7 @@
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<span class="input-group-text"><i class=""></i></span>
 						</div>
 						<input name="transaction" type="text" class="form-control" placeholder="Enter Your Transaction Id">
 						
@@ -168,9 +168,9 @@
 				<div class="d-flex justify-content-center links">
 					 Have an account?<a href="{{route('user.login')}}">Login</a>
 				</div>
-				<div class="d-flex justify-content-center">
+				<!-- <div class="d-flex justify-content-center">
 					<a href="#">Forgot your password?</a>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

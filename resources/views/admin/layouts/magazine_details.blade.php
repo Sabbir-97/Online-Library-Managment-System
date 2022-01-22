@@ -21,6 +21,7 @@
 <p>Magazine Name: {{$magazine->magazine_name}}</p>
 <p>Category: {{$magazine->category}}</p>
 <p>Available: {{$magazine->available_magazine}}</p>
+<p>Available: {{$magazine->description}}</p>
 
 
     </div>

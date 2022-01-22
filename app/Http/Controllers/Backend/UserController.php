@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -39,5 +40,19 @@ class UserController extends Controller
     {
         Auth::logout();
         return redirect()->route('admin.login')->with('message','Logging out.');
+    }
+
+    public function userdelete($id)
+    {
+        User::find($id)->delete();
+        return redirect()->back()->with('success','user Removed');
+
+    }
+    public function approve($id)
+    {
+        $data=User::find($id);
+        $data->active='1';
+        $data->save();
+        return redirect()->back()->with('success','User Removed');
     }
 }

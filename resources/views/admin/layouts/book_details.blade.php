@@ -22,6 +22,7 @@
 <p>Book Title: {{$allBook->book_title}}</p>
 <p>Category: {{$allBook->category}}</p>
 <p>Available: {{$allBook->available_books}}</p>
+<p>Description: {{$allBook->description}}</p>
 
 
     </div>

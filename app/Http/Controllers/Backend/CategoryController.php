@@ -27,6 +27,12 @@ class CategoryController extends Controller
         return view('admin.layouts.category_form');
     }
 
+    public function viewMagazine($id){
+        $category= Category::findOrFail($id);
+        // dd($allBook);
+        return view('admin.layouts.view_category',compact('category'));
+    }
+
     public function store(Request $request){
         $request->validate([
         
@@ -45,11 +51,20 @@ class CategoryController extends Controller
                 
             }
 
+            $bookFileName = '';
+        if ($request->hasFile('pdf')) {
+            $bookfile=$request->file('pdf');
+            $bookFileName = date('Ymdhms').'.'.$bookfile->getClientOriginalExtension();
+            // dd($bookFileName);
+            $bookfile->storeAs('/uploads/book',$bookFileName);
+        }
+
     category::create([
         
         'category_title'=>$request->category_title,
         'discription'=>$request->discription,
         'available'=>$request->available,
+        'file'=>$bookFileName,
         'image'=> $categories,
     ]);
     return redirect('/admin/category/list');

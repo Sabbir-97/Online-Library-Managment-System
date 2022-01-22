@@ -8,10 +8,10 @@
                                 Dashboard
                             </a>
                             
-                            <!-- <a class="nav-link" href="{{route('waitingUsers')}}">
+                            <a class="nav-link" href="{{route('waitingUsers')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-arrow-alt-circle-right "></i></div>
                                 All Waiting User
-                            </a> -->
+                            </a>
 
                             <a class="nav-link" href="{{route('admin.alluser')}}">
                                 <div class="sb-nav-link-icon"><i class="fab fa-sketch"></i></div>

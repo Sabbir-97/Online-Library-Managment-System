@@ -29,6 +29,8 @@
       <th scope="col">Magazine Name</th>
       <th scope="col">Category</th>
       <th scope="col">Available</th>
+      <th scope="col">Description</th>
+      <th scope="col">File</th>
       <th scope="col">Image</th>
       <th scope="col">Action</th>
     </tr>
@@ -39,6 +41,8 @@
       <td>{{$magazine->magazine_name}}</td>
       <td>{{$magazine->category}}</td>
       <td>{{$magazine->available_magazine}}</td>
+      <td>{{$magazine->description}}</td>
+      <td><a target="_blank" type="button" class="btn btn-success" href="{{ url('/uploads/book/',$magazine->file) }}">View</a></td>
       <td><img src="{{url('/uploads/magazines/'.$magazine->img)}}" style="width:100px;height:50px" alt=""></td>
 
       <td>

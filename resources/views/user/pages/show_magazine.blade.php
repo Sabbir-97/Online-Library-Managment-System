@@ -32,7 +32,8 @@
               <h4>Title: {{$magazine->magazine_name}}</h4>
                 <p>Category: {{$magazine->category}}</p>
                 <p>Available: {{$magazine->available_magazine}}</p>
-                <a href="{{route('user.magazine.details',$magazine->id)}}"  class="btn btn-success">View</a>
+                <p><a target="_blank" type="button" class="btn btn-success" href="{{ url('/uploads/book/',$magazine->file) }}">View</a></p>
+                <!-- <a href="{{route('user.magazine.details',$magazine->id)}}"  class="btn btn-success">View</a> -->
             </div>
           </div>
         @endforeach

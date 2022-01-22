@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 
 class NewspaperController extends Controller
 {
+
+    
     public function newspaperlist(Request $request){
 
         $search = $request->query('search');
@@ -17,17 +19,33 @@ class NewspaperController extends Controller
                 ->orWhere('category','like','%'.$search.'%')->get();
             return view('admin.layouts.newspaper_list',compact('newspapers'));
         }
+        
 
 
         $newspapers=Newspaper::all();
         return view('admin.layouts.newspaper_list',[
             'newspapers'=> $newspapers
         ]);
+
+        
+
+        
     }
+
+    
 
     public function newspaperform(){
         return view('admin.layouts.newspaper_form');
     }
+    public function viewNewspaper($id){
+        $newspaper= Newspaper::findOrFail($id);
+        // dd($allBook);
+        return view('admin.layouts.viewnewspaper',compact('newspaper'));
+    }
+
+    
+
+    
 
     public function store(Request $request){
         $request->validate([
@@ -40,6 +58,8 @@ class NewspaperController extends Controller
 
         ]);
 
+        
+
 
         $newspapers='';
         if($request->hasfile('img_news')){
@@ -48,17 +68,30 @@ class NewspaperController extends Controller
             $newspaper->storeAs('/uploads/newspapers',$newspapers);
             
         }
+
+        $bookFileName = '';
+        if ($request->hasFile('pdf')) {
+            $bookfile=$request->file('pdf');
+            $bookFileName = date('Ymdhms').'.'.$bookfile->getClientOriginalExtension();
+            // dd($bookFileName);
+            $bookfile->storeAs('/uploads/book',$bookFileName);
+        }
         newspaper::create([
             
             'newspaper_name'=>$request->newspaper_name,
             'category'=>$request->category,
+            
             'available_newspaper'=>$request->available_newspaper,
+            'description'=>$request->description,
+            'file'=>$bookFileName,
             'img_news'=>$newspapers,
         ]);
         // return redirect('/admin/newspaper/list');
         return redirect()->route('admin.newspaper');
 
     }
+
+    
 
 
     public function newspaper_details($id){
@@ -88,10 +121,15 @@ class NewspaperController extends Controller
         'newspaper_name'=>$request->newspaper_name,
         'category'=>$request->category,
         'available_newspaper'=>$request->available_newspaper,
+        ' description'=>$request-> description,
+        'file'=>$request-> file,
+       
         'img_news'=>$newspapers,
 
     ]);
     return redirect()->route('admin.newspaper')->with('Success','Newspaper Updated Successfully.');
+
+    
 
     
         

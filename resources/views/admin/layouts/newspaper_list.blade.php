@@ -30,6 +30,8 @@
       <th scope="col">Newspaper Name</th>
       <th scope="col">Category</th>
       <th scope="col">Available</th>
+      <th scope="col">Description</th>
+      <th scope="col">File</th>
       <th scope="col">Image</th>
       <th scope="col">Action</th>
     </tr>
@@ -40,6 +42,8 @@
       <td>{{$newspaper->newspaper_name}}</td>
     <td>{{$newspaper->category}}</td>
       <td>{{$newspaper->available_newspaper}}</td>
+      <td>{{$newspaper->description}}</td>
+      <td><a target="_blank" type="button" class="btn btn-success" href="{{ url('/uploads/book/',$newspaper->file) }}">View</a></td>
       <td> <img src="{{url('/uploads/newspapers/' .$newspaper->img_news)}}" style="width:100px;height:50px" alt=""></td>
 
       <td>

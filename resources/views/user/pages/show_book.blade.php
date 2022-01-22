@@ -32,7 +32,8 @@
               <h4>Title: {{$allBook->book_title}}</h4>
                 <p>Category: {{$allBook->category}}</p>
                 <p>Available: {{$allBook->available_books}}</p>
-                <a href="{{route('user.book.details',$allBook->id)}}"  class="btn btn-success">View</a>
+                <p><a target="_blank" type="button" class="btn btn-success" href="{{ url('/uploads/book/',$allBook->file) }}">View</a></p>
+                <!-- <a href="{{route('user.book.details',$allBook->id)}}"  class="btn btn-success">View</a> -->
             </div>
           </div>
         @endforeach

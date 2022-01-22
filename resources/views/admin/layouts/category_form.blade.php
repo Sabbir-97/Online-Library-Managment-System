@@ -25,6 +25,14 @@
             </div>
 
             <div class="field">
+            <label class="label">File</label>
+            <div class="control">
+              <input required class="input" name="pdf" type="file" placeholder="choose your file ">
+            </div>
+
+          </div>
+
+            <div class="field">
             <label class="label">Available</label>
             <div class="control">
               <input required class="input" name="available" type="text" placeholder="Enter the available">

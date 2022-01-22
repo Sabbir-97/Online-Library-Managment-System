@@ -33,7 +33,8 @@
               <h4>Title: {{$newspaper->newspaper_name}}</h4>
                 <p>Category: {{$newspaper->category}}</p>
                 <p>Available: {{$newspaper->available_newspaper}}</p>
-                <a href="{{route('user.newspaper.details',$newspaper->id)}}"  class="btn btn-success">View</a>
+                <p><a target="_blank" type="button" class="btn btn-success" href="{{ url('/uploads/book/',$newspaper->file) }}">View</a></p>
+                <!-- <a href="{{route('user.newspaper.details',$newspaper->id)}}"  class="btn btn-success">View</a> -->
             </div>
           </div>
         @endforeach

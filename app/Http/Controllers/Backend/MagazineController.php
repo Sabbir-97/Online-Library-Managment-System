@@ -27,6 +27,12 @@ class MagazineController extends Controller
     public function magazineform(){
         return view('admin.layouts.magazine_form');
     }
+
+    public function viewMagazine($id){
+        $magazine= Magazine::findOrFail($id);
+        // dd($allBook);
+        return view('admin.layouts.view_magazine',compact('magazine'));
+    }
     public function store(Request $request){
    
         $request->validate([
@@ -46,6 +52,13 @@ class MagazineController extends Controller
             $magazine->storeAs('/uploads/magazines',$magazines);
             
         }
+        $bookFileName = '';
+    if ($request->hasFile('pdf')) {
+        $bookfile=$request->file('pdf');
+        $bookFileName = date('Ymdhms').'.'.$bookfile->getClientOriginalExtension();
+        // dd($bookFileName);
+        $bookfile->storeAs('/uploads/book',$bookFileName);
+    }
 
 
 
@@ -56,6 +69,8 @@ class MagazineController extends Controller
         'magazine_name'=>$request->magazine_name,
         'category'=>$request->category,
         'available_magazine'=>$request->available_magazine,
+        'description'=>$request->description,
+        'file'=>$bookFileName,
         'img'=> $magazines,
         
     ]);
@@ -87,10 +102,13 @@ public function magazineUpdate(Request $request,$id)
         
     }
 
+    
+
     Magazine::find($id)->update([
         'magazine_name'=>$request->magazine_name,
         'category'=>$request->category,
         'available_magazine'=>$request->available_magazine,
+        'description'=>$request->description,
         'img'=> $magazines,
 
     ]);

@@ -42,6 +42,12 @@
             </div>
           </div>
 
+          <div class="field">
+            <label class="label">Description</label>
+            <div class="control">
+              <textarea class="input" name="description" value="{{$allBook['description']}}" type="text" placeholder="Enter the description "></textarea>
+            </div>
+
           <div class="field grouped">
             <div class="control">
               <button type="submit" class="submit-button">

@@ -29,7 +29,10 @@
       <th scope="col">Book Title</th>
       <th scope="col">Category</th>
       <th scope="col">Available</th>
+      <th scope="col">Description</th>
+      <th scope="col">File</th>
       <th scope="col">Image</th>
+      
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -43,6 +46,9 @@
       <td>{{$allBook->book_title}}</td>
      <td>{{$allBook->category}}</td>
       <td>{{$allBook->available_books}}</td>
+      <td>{{$allBook->description}}</td>
+      <td><a target="_blank" type="button" class="btn btn-success" href="{{ url('/uploads/book/',$allBook->file) }}">View</a></td>
+      
       <td> <img src="{{asset('/images/book/' .$allBook->image_path)}}" style="width:100px;height:50px" alt=""></td>
       
       

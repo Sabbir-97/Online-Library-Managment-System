@@ -75,6 +75,9 @@ Route::get('admin/book/list/details/{id}',[AllBooksListController::class,'book_d
 Route::get('admin/book/list/delete/{id}',[AllBooksListController::class,'book_delete'])->name('admin.book.delete');
 Route::get('admin/book/list/edit/{id}',[AllBooksListController::class,'edit'])->name('admin.book.edit');
 Route::put('admin/book/update/{id}',[AllBooksListController::class,'bookUpdate'])->name('admin.book.update');
+Route::get('/admin/viewbook/{id}',[AllBooksListController::class,'viewBook'])->name('viewbook');
+
+
 
 
 
@@ -82,6 +85,10 @@ Route::put('admin/book/update/{id}',[AllBooksListController::class,'bookUpdate']
 
 Route::get('/all/waiting/user',[AllWaitingUserController::class,'allWaitingUser'])->name('waitingUsers');
 Route::get('/waiting/user/form',[AllWaitingUserController::class,'create'])->name('waiting.form');
+
+Route::get('/user/approval/{id}',[UserController::class,'approve'])->name('user.approve');
+Route::get('/user/delete/{id}',[UserController::class,'userdelete'])->name('user.delete');
+
 
 //table+button
 
@@ -107,6 +114,7 @@ Route::get('admin/newspaper/list/details/{id}',[NewspaperController::class,'news
 Route::get('admin/newspaper/list/delete/{id}',[NewspaperController::class,'newspaper_delete'])->name('admin.newspaper.delete');
 Route::get('admin/newspaper/edit/{id}',[NewspaperController::class,'edit'])->name('admin.newspaper.edit');
 Route::put('admin/newspaper/update/{id}',[NewspaperController::class,'newspaperUpdate'])->name('admin.newspaper.update');
+Route::get('/admin/viewnewspaper/{id}',[NewspaperController::class,'viewNewspaper'])->name('viewnewspaper');
 
 
 //route for magazine
@@ -117,6 +125,7 @@ Route::get('admin/magazine/list/details/{id}',[MagazineController::class,'magazi
 Route::get('admin/magazine/list/delete/{id}',[MagazineController::class,'magazine_delete'])->name('admin.magazine.delete');
 Route::get('admin/magazine/edit/{id}',[MagazineController::class,'edit'])->name('admin.magazine.edit');
 Route::put('admin/magazine/update/{id}',[MagazineController::class,'magazineUpdate'])->name('admin.magazine.update');
+Route::get('/admin/viewmagazine/{id}',[MagazineController::class,'viewMagazine'])->name('viewmagazine');
 
 
 

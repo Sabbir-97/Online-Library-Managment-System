@@ -19,6 +19,8 @@ class CreateNewspapersTable extends Migration
             $table->string('newspaper_name');
             $table->string('category');
             $table->string('available_newspaper');
+            $table->string('description');
+            $table->string('file');
             $table->string('img_news');
     
             $table->timestamps();

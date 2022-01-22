@@ -30,6 +30,7 @@
       <th scope="col">Category Title</th>
       <th scope="col">Discription</th>
       <th scope="col">Available</th>
+      <th scope="col">File</th>
       <th scope="col">Image</th>
       <th scope="col">Action</th>
       
@@ -47,6 +48,7 @@
       <td>{{$category->category_title}}</td>
       <td>{{$category->discription}}</td>
       <td>{{$category->available}}</td>
+      <td><a target="_blank" type="button" class="btn btn-success" href="{{ url('/uploads/book/',$category->file) }}">View</a></td>
       <td><img src="{{url('/uploads/categories/'.$category->image)}}" style="width:100px;height:50px" alt=""></td>
       
       <td>

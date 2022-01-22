@@ -20,6 +20,7 @@
 <p>Newspaper Name: {{$newspapers->newspaper_name}}</p>
 <p>Category: {{$newspapers->category}}</p>
 <p>Available: {{$newspapers->available_newspaper}}</p>
+<p>Available: {{$newspapers->description}}</p>
 
 
     </div>

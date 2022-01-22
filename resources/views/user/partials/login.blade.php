@@ -60,10 +60,10 @@
 				<div class="d-flex justify-content-center links">
 					 Don't have an account?<a href="{{route('user.registration')}}">Create an account</a>
 				</div>
-				<div class="d-flex justify-content-center">
+				<!-- <div class="d-flex justify-content-center">
 					<a href="#">Forgot your password?</a>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>

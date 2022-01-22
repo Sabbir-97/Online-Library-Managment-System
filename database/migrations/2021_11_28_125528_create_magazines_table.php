@@ -19,6 +19,8 @@ class CreateMagazinesTable extends Migration
             $table->string('magazine_name');
             $table->string('category');
             $table->string('available_magazine');
+            $table->string('description');
+            $table->string('file');
             $table->string('img');
             $table->timestamps();
         });

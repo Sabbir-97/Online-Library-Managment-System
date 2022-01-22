@@ -39,6 +39,14 @@
           </div>
 
           <div class="field">
+            <label class="label">Description</label>
+            <div class="control">
+              <input required class="input" name="description" value="{{$newspaper['description']}}" type="text" placeholder="Enter the description ">
+            </div>
+          </div>
+
+
+          <div class="field">
             <label class="label">Image</label>
             <div class="control">
               <input required class="input" name="img_news" type="file" placeholder="Choose your Image ">

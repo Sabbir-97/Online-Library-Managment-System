@@ -41,6 +41,9 @@
       <td>{{$waitingusers->payment_method}}</td>
       <td>{{$waitingusers->transaction_id}}</td>
       <td>{{$waitinguser->approve}}</td>
+
+       <td> <a button type="button" class="btn btn-success" href="{{route('user.approve')}}"></a>Approve</td>
+       <td> <a button type="button" class="btn btn-success" href="{{route('user.delete')}}"></a>Delete</td>
     </tr>
    @endforeach 
    
